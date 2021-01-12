@@ -1,6 +1,7 @@
 <template>
     <div class="bigbox">
         <div class="banner"><img src="http://image.suning.cn/uimg/asbs/ad/1610330139813_app_wap_list.jpg" alt=""></div>
+        <!-- <div class="zhanwei"></div> -->
         <div class="main">
             <div class="title"><span>热门推荐</span></div>
             <div class="content">
@@ -86,14 +87,16 @@
     }
     .banner{
         width: 100%;
-        height: 110px;
-        /* background-color: blue; */
+        margin-top: 15px;
+        margin-bottom: 15px;
+       
         display: flex;
         justify-content: center;
         align-items: center;
-        position: absolute;
+      
         top: 0;
     }
+    
     .banner>img{
         width: 89%;
         border-radius: 12px;
@@ -101,7 +104,8 @@
     .main{
         flex-grow: 1;
         /* background-color: cornflowerblue; */
-        margin-top: 115px;
+        /* margin-top: 115px; */
+        flex-grow: 1;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -112,6 +116,8 @@
         width: 89%;
         /* background-color: crimson; */
         height: 42px;
+        padding-bottom: 15px;
+        padding-top: 15px;
         display: flex;
         align-items: center;
         font-size: 12px;
@@ -137,6 +143,7 @@
     }
     .photo>img{
         width: 100%;
+        height: 100%;
     }
     .thisname{
         width: 100%;
