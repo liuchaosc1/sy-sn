@@ -28,8 +28,9 @@
             <img src="./images/shopping-car.png" alt="" v-else class="bottom-img">
             <span class="bottom-title">购物车</span>
         </div>
-         <div class="bottom-btn" @click="btn('like')" >
-            <img src="./images/mine-b.png" alt="" v-if="componentName=='my-mine'" class="mine">
+         <div class="bottom-btn" @click="btn('my-mine')" >
+           
+             <img src="./images/mine-b.png" alt="" v-if="componentName=='my-mine'" class="bottom-img">
             <img src="./images/mine.png" alt="" v-else class="bottom-img">
             <span class="bottom-title">我的易购</span>
             
@@ -50,7 +51,10 @@ export default {
   methods:{
     btn(componentName){
       this.componentName=componentName;
+      console.log(this.componentName)
+      
     }
+    
   }
 }
 </script>
