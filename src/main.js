@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import App from './App.vue'
-
+import "./iconfont/iconfont.css"
 Vue.use(VueRouter)
 
 import ElementUI from 'element-ui';
