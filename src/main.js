@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import App from './App.vue'
 import router from "./router/index.js"
+import "./iconfont/iconfont.css"
 Vue.use(VueRouter)
 
 import ElementUI from 'element-ui';
