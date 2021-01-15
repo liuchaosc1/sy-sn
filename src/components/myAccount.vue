@@ -14,24 +14,24 @@
             <div class="phone">
                 <input
                     type="text"
-                    v-model="phoneNum"
+                   
                     placeholder="请输入手机号/用户名/邮箱"
                     class="phone-number"
                 />
             </div>
             <!-- password -->
             <div class="password">
-                <input type="password" v-model="password" placeholder="请输入密码" class="phone-number" />
+                <input type="password"  placeholder="请输入密码" class="phone-number" />
 
                 <div class="password-icon">
-                    <img src="" @click="imgclick" v-show="icon" alt />
-                    <img src="" @click="imgclick" v-show="!icon" alt />
+                    <img src=""   alt />
+                    <img src=""   alt />
                     <a href>忘记密码</a>
                 </div>
             </div>
             <!-- 登录 -->
             <div class="register">
-                <a href class="register-p1" @click.prevent="enter(phoneNum,password)">登录</a>
+                <a href class="register-p1">登录</a>
                 <a href class="register-p2">验证码登录</a>
             </div>
         </div>

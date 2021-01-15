@@ -501,7 +501,7 @@
               <div class="pro-list-wrapper">
                   <div class="pro-list">
                       <div class="left-list">
-                            <div class="kw-wrapper" v-for="item in list" :key="item" @click="toshopItem">
+                            <div class="kw-wrapper" v-for="(item,index) in list" :key="index" @click="toshopItem">
                                 <div class="pro-image-wrapper">
                                     <img class="pro-img" :src="item.images" alt="">
                                 </div>
@@ -516,7 +516,7 @@
                       </div>
                       <div class="right-list">
                         
-                        <div class="kw-wrapper" v-for="item in list" :key="item">
+                        <div class="kw-wrapper" v-for="(item,index) in list" :key="index">
                                 <div class="pro-image-wrapper">
                                     <img class="pro-img" :src="item.images" alt="">
                                 </div>
@@ -574,20 +574,20 @@ export default {
     }
   },
   mounted(){
-    setInterval(() => {
-      if(this.num>-11){
-        this.num-=5.5;
-      }else if(this.num<=-11){
-        this.num=0
-      }
-    },2500);
-    setInterval(() => {
-      if(this.second>0){
-        this.second-=1;
-      }else if(this.second<=0){
-        this.second=0;
-      }
-    },1000);
+    // setInterval(() => {
+    //   if(this.num>-11){
+    //     this.num-=5.5;
+    //   }else if(this.num<=-11){
+    //     this.num=0
+    //   }
+    // },2500);
+    // setInterval(() => {
+    //   if(this.second>0){
+    //     this.second-=1;
+    //   }else if(this.second<=0){
+    //     this.second=0;
+    //   }
+    // },1000);
    
 
   },

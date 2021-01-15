@@ -9,7 +9,7 @@
     <div class="pageCup" v-if="productList.banner == undefined" >
       <div class="movebox" ref="move2" >
         <div :style="{left:'-'+left+'%'}" ref="move3">
-          <p v-for="(item,index) in productList.content"  >
+          <p v-for="(item,index) in productList.content" :key="index" >
           <span @click="cup(item.class,index)">
             {{item.class}}
             <div  v-if="index1 == index" class="sign"></div>
