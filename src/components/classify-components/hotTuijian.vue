@@ -9,7 +9,7 @@
     <div class="pageCup" v-if="productList.banner == undefined" >
       <div class="movebox" ref="move2" >
         <div :style="{left:'-'+left+'%'}" ref="move3">
-          <p v-for="(item,index) in productList.content"  >
+          <p v-for="(item,index) in productList.content" :key="index">
           <span @click="cup(item.class,index)">
             {{item.class}}
             <div  v-if="index1 == index" class="sign"></div>
@@ -61,7 +61,7 @@ export default {
     xhr.onload = function () {
       let list = JSON.parse(xhr.response);
       // console.log(list);
-      for (let i = 0; i < list.length; i++) {
+      for (let i = 1; i < list.length; i++) {
         // console.log(list[i].title)
         if (list[i].title == that.title) {
           that.productList = list[i];
@@ -98,7 +98,7 @@ export default {
     xhr.onload = function () {
       let list = JSON.parse(xhr.response);
       // console.log(list);
-      for (let i = 0; i < list.length; i++) {
+      for (let i = 1; i < list.length; i++) {
         
         if (list[i].title == that.title) {
           that.productList = list[i];

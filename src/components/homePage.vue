@@ -8,7 +8,7 @@
             </div>
         </keep-alive>
       </div>
-      <div class="bottom-bar">
+      <div class="bottom-bar" v-show="componentName!='my-mine'">
         <div class="bottom-btn" @click="btn('my-like')" >
             <img src="../images/guess-you-like.png" alt="" v-if="componentName=='my-like'" class="bottom-img">
             <img src="../images/youlike.png" alt="" v-else class="bottom-img">
@@ -72,7 +72,7 @@ export default {
   }
 }
 </script>
-<style scoped>
+<style >
 
 *{
   margin: 0;
@@ -82,27 +82,28 @@ export default {
     height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     /* overflow: hidden; */
     
 }
 .main{
     height: 100%;
-   
 }
 .comp-content{
     /* background-color: yellow; */
     flex-grow: 1;
+    overflow: auto;
 }
 .bottom-bar{
   width: 100%;
     flex-shrink: 0;
-    background: rgb(247, 247, 247);
+    background: #fff;
     display: flex;
     flex-direction: row;
-    
    
     justify-content: space-between;
     height: 50px;
+    
    
 }
 

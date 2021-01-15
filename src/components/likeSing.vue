@@ -1,3 +1,1226 @@
 <template>
-    <div>我喜欢</div>
+  <!-- 猜你喜欢页面 -->
+  <div>
+    <!-- 轮播图上方内容 -->
+    <div class="sn-nav-wrapper">
+      <div class="index-nav">
+        <div class="index-nav-tag">
+          <img
+            src="https://image2.suning.cn/uimg/cms/img/160942088959193711.png"
+            alt=""
+          />
+        </div>
+        <div class="type top-type">
+          <!-- 最上方广告 -->
+          <div class="content-wrap-one">
+            <a href="">
+              <img
+                src="https://image1.suning.cn/uimg/cms/img/157199320847433454.png"
+                alt=""
+              />
+            </a>
+            <div class="top-wrapper middel-style">
+              <a href="https://cuxiao.m.suning.com/scms/ndxdhc.html">
+                <img
+                  src="https://image2.suning.cn/uimg/cms/img/161043379076653672.gif"
+                  alt=""
+                />
+              </a>
+            </div>
+            <a href="">
+              <img
+                src="https://image2.suning.cn/uimg/cms/img/157199321817918653.png"
+                alt=""
+              />
+            </a>
+          </div>
+          <!-- 搜索框 -->
+          <div class="content-wrap-two">
+            <div class="search-bar">
+              <a
+                href="https://m.suning.com/search.html?defaultWord=%E5%B9%B4%E8%B4%A7%E7%A4%BC%E7%9B%92299%E5%87%8F210"
+              ></a>
+              <i class="searchIcont"></i>
+            </div>
+            <form>
+              <input
+                type="text"
+                placeholder="年货礼盒200减210"
+                class="searchInput"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="index-wrap">
+      <!-- 轮播图内容 -->
+      <div class="v7-banner">
+        <img
+          src="https://image1.suning.cn/uimg/cms/img/160942141893352387.png"
+          alt=""
+        />
+        <div class="swiper-wrapper"></div>
+      </div>
+      <!-- 中间图片广告 -->
+      <div class="v7-zdy">
+        <a
+          href="https://cuxiao.m.suning.com/scms/m0622coapp.html?adTypeCode=1137&adId=https%3A%2F%2Flib.suning.com%2Fweex%2Fm0622coapp.js%3FpageCode%3Dm0622coapp"
+        >
+          <img
+            src="https://image1.suning.cn/uimg/cms/img/161043680987272694.jpg?from=mobile"
+            alt=""
+          />
+        </a>
+        <a href="">
+          <img
+            src="https://image2.suning.cn/uimg/cms/img/161043777586941531.jpg?from=mobile"
+            alt=""
+          />
+        </a>
+        <a href="">
+          <img
+            src="https://image2.suning.cn/uimg/cms/img/161043779656738453.jpg?from=mobile"
+            alt=""
+          />
+        </a>
+      </div>
+      <!-- 更多频道 -->
+      <div class="enter-list">
+        <div class="enter-wrapper">
+          <a href="">
+            <div class="enter-img">
+              <img
+                src="https://image3.suning.cn/uimg/cms/img/160518006726907674.png?from=mobile"
+                alt=""
+              />
+              <div class="title">苏宁秒杀</div>
+            </div>
+          </a>
+          <a href="">
+            <div class="enter-img">
+              <img
+                src="https://image1.suning.cn/uimg/cms/img/158225094251284751.png?from=mobile"
+                alt=""
+              />
+              <div class="title">苏宁超市</div>
+            </div>
+          </a>
+          <a href="">
+            <div class="enter-img">
+              <img
+                src="https://image1.suning.cn/uimg/cms/img/158225098618947382.png?from=mobile"
+                alt=""
+              />
+              <div class="title">苏宁拼购</div>
+            </div>
+          </a>
+          <a href="">
+            <div class="enter-img">
+              <img
+                src="https://image1.suning.cn/uimg/cms/img/159919108574328432.png?from=mobile"
+                alt=""
+              />
+              <div class="title">手机数码</div>
+            </div>
+          </a>
+          <a href="">
+            <div class="enter-img">
+              <img
+                src="https://image2.suning.cn/uimg/cms/img/158225106790473382.png?from=mobile"
+                alt=""
+              />
+              <div class="title">苏宁家电</div>
+            </div>
+          </a>
+          <a href="">
+            <div class="enter-img">
+              <img
+                src="https://image2.suning.cn/uimg/cms/img/158225110605546246.png?from=mobile"
+                alt=""
+              />
+              <div class="title">免费水果</div>
+            </div>
+          </a>
+          <a href="">
+            <div class="enter-img">
+              <img
+                src="https://image2.suning.cn/uimg/cms/img/158225119197911173.png?from=mobile"
+                alt=""
+              />
+              <div class="title">赚钱消消乐</div>
+            </div>
+          </a>
+          <a href="">
+            <div class="enter-img">
+              <img
+                src="https://image3.suning.cn/uimg/cms/img/158225123358512204.png?from=mobile"
+                alt=""
+              />
+              <div class="title">签到有礼</div>
+            </div>
+          </a>
+          <a href="">
+            <div class="enter-img">
+              <img
+                src="https://image3.suning.cn/uimg/cms/img/158225129991255185.png?from=mobile"
+                alt=""
+              />
+              <div class="title">领劵中心</div>
+            </div>
+          </a>
+          <a href="">
+            <div class="enter-img">
+              <img
+                src="https://image3.suning.cn/uimg/cms/img/158225135374622745.png?from=mobile"
+                alt=""
+              />
+              <div class="title">更多频道</div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <!-- 新人礼广告 -->
+      <div class="newImgFloor">
+        <div class="newImgFloor-content">
+          <a href="" class="content-item1">
+            <img
+              src="https://image1.suning.cn/uimg/cms/img/160415964665844208.png"
+              alt=""
+            />
+          </a>
+          <a href="" class="content-item">
+            <img
+              src="https://image3.suning.cn/uimg/cms/img/160415965447533335.gif"
+              alt=""
+            />
+          </a>
+          <a href="" class="content-item">
+            <img
+              src="https://image3.suning.cn/uimg/cms/img/160415966314573447.gif"
+              alt=""
+            />
+          </a>
+        </div>
+      </div>
+      <!-- 秒杀 -->
+            <div class="hor-view kw">
+                    <div class="lazyimg">
+                        <div class="title-wrapper">
+                            <div class="title">天天低价</div>
+                                    <div class="count">
+                                        <span class="hour-node">0{{hour}}</span>：<span class="minute-node"
+                                            >{{minute}}</span
+                                        >：<span class="second-node">{{second}}</span>
+                                    </div>
+                            </div>
+                            <p class="desc">人气好货限时抢</p>
+                            <div class="shop-items">
+                                <div class="shop-item-left">
+                                            <img
+                                                src="//image3.suning.cn/uimg/nmps/MBLSPZT/100781396124231474picH_1_370x370.jpg"
+                                                alt=""
+                                            />
+                                            <p class="tag-price">￥29.9</p>
+                                </div>
+                                <div class="shop-item-right">
+                                    <img
+                                        src="//image3.suning.cn/uimg/nmps/MBLSPZT/10078080710568628847picH_1_370x370.jpg"
+                                        alt=""
+                                    />
+                                    <p class="tag-price">￥1.1</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hor-gap"></div>
+                    <div class="lazyimg img">
+                                <div class="title-wrapper">
+                                    <div class="title">苏宁秒杀</div>
+                                </div>
+                                <p class="desc">品质好货天天秒</p>
+                                <div class="shop-items">
+                                    <div class="shop-item-left">
+                                        <img
+                                            src="//imgservice.suning.cn/uimg1/b2c/image/T6vpfeqQrWr-K0SHoVL-2w.jpg?format=_is_200w_200h_4e.webp"
+                                            alt=""
+                                        />
+                                        <p class="img-desc">想念</p>
+                                    </div>
+                                
+                                    <div class="shop-item-right">
+                                        <img
+                                            src="//imgservice.suning.cn/uimg1/b2c/image/W03NnFCWlrhlH0_5FsGiDQ.jpg?format=_is_200w_200h_4e.webp"
+                                            alt=""
+                                        />
+                                        <p class="img-desc right">界面</p>
+                                    </div>
+                                </div>
+                        </div>
+                
+        
+       
+            </div>
+             <div class="hor-view kw">
+                   <div class="lazyimg img">
+                                <div class="title-wrapper">
+                                    <div class="title">新品首发</div>
+                                </div>
+                                <p class="desc">iQ007享24期免息</p>
+                                <div class="shop-items">
+                                    <div class="shop-item-left">
+                                        <img
+                                            src="https://image3.suning.cn/uimg/cms/img/161033601399897577.png?format=_is_200w_200h.webp"
+                                            alt=""
+                                        />
+                                        <p class="img-desc">大牌上新</p>
+                                    </div>
+                                
+                                    <div class="shop-item-right">
+                                        <img
+                                            src="https://image1.suning.cn/uimg/cms/img/161050662557423877.png?format=_is_200w_200h.webp"
+                                            alt=""
+                                        />
+                                        <p class="img-desc right">免费试用</p>
+                                    </div>
+                                </div>
+                        </div>
+                    <div class="hor-gap"></div>
+                    <div class="lazyimg img">
+                                <div class="title-wrapper">
+                                    <div class="title">苏宁拼购</div>
+                                </div>
+                                <p class="desc">2人拼更实惠 全场包邮</p>
+                                <div class="shop-items">
+                                    <div class="shop-item-left">
+                                        <img
+                                            src="//image.suning.cn/uimg/b2c/qrqm/0000000000000000010721947155.jpg?format=_is_200w_200h_4e.webp"
+                                            alt=""
+                                        />
+                                        <p class="img-desc">2人拼49</p>
+                                    </div>
+                                
+                                    <div class="shop-item-right">
+                                        <img
+                                            src="//image.suning.cn/uimg/b2c/qrqm/0000000000000000000126525311.jpg?format=_is_200w_200h_4e.webp"
+                                            alt=""
+                                        />
+                                        <p class="img-desc right">2人拼18.5</p>
+                                    </div>
+                                </div>
+                        </div>
+                
+        
+       
+            </div>
+            <div class="space-px"></div>
+            <!-- 为您推荐 -->
+            <div class="title-four">
+                <div class="left-title">
+                    <a href="">
+                        <p class="title line-clamp1">为您推荐</p>
+                        <p class="desc line-clamp1">精选频道</p>
+                    </a>
+                </div>
+                <div class="four-space">
+                  <div class="four-item">
+                    <a href="" class="click-area">
+                      <p >苏宁国际</p>
+                    </a>
+                    <a href="" class="img-wrapper">
+                      <img src="https://image3.suning.cn/uimg/b2c/qrqm/0070208536000000012009352165_200x200.jpg?format=_is_200w_200h_4e.webp" alt="" class="pro-img opal">
+                    </a>
+                  </div>
+                  
+                </div>
+
+                 <div class="four-space">
+                  <div class="four-item">
+                    <a href="" class="click-area">
+                      <p >苏宁Outlets</p>
+                    </a>
+                    <a href="" class="img-wrapper">
+                      <img src="https://image2.suning.cn/uimg/cms/img/157164834630654824.png?from=mobile" alt="" class="pro-img opal">
+                    </a>
+                  </div>
+                  
+                </div>
+                 <div class="four-space">
+                  <div class="four-item">
+                    <a href="" class="click-area">
+                      <p >会员抢购</p>
+                    </a>
+                    <a href="" class="img-wrapper">
+                      <img src="https://image1.suning.cn/uimg/cms/img/160941888895990187.png?from=mobile" alt="" class="pro-img opal">
+                    </a>
+                  </div>
+                  
+                </div>
+                 <div class="four-space">
+                  <div class="four-item">
+                    <a href="" class="click-area">
+                      <p>Super会员</p>
+                    </a>
+                    <a href="" class="img-wrapper">
+                      <img src="https://image1.suning.cn/uimg/cms/img/160941866483066340.png?from=mobile" alt="" class="pro-img opal">
+                    </a>
+                  </div>
+                  
+                </div>
+            </div>
+          <div class="new-bd">
+            <div class="title-image">
+              <img src="https://image2.suning.cn/uimg/cms/img/157793125530122894.png?from=mobile" alt="">
+            </div>
+            <div class="newbd-list">
+              <div class="bd-three">
+                  <div class="bd-one-item new">
+                        <img class="one" src="https://image3.suning.cn/uimg/cms/img/156929156220838915.png?from=mobile" alt="">
+                        <img class="two" src="//imgservice.suning.cn/uimg1/sniss/improve/3iExSJHl0Xy7u92YiZkG1w.jpg?format=_is_200w_200h_4e.webp" alt="">
+                        <p class="three-name">
+                          <span>人气榜</span>
+                        </p>
+                        <p class="three-title">营养滋补榜</p>
+                        <p class="three-desc">卖爆10.5万件</p>
+                  </div>
+                  <div class="bd-one-item swiper">
+                    <ul :style="'margin-top:'+num+'rem'" class="tran-top">
+                      <li>
+                        <img class="one" src="https://image2.suning.cn/uimg/cms/img/156929175197393382.png?from=mobile" alt="">
+                        <img class="two" src="//imgservice.suning.cn/uimg1/sniss/improve/vHcS87PoovgCiyD6R1QOXA.jpg?format=_is_200w_200h_4e.webp" alt="">
+                        <p class="three-name">
+                          <span>人气榜</span>
+                        </p>
+                        <p class="three-title">营养滋补榜</p>
+                        <p class="three-desc">卖爆10.5万件</p>
+                      </li>
+                      <li>
+                        <img class="one" src="https://image2.suning.cn/uimg/cms/img/156929175197393382.png?from=mobile" alt="">
+                        <img class="two" src="//imgservice.suning.cn/uimg1/sniss/improve/vHcS87PoovgCiyD6R1QOXA.jpg?format=_is_200w_200h_4e.webp" alt="">
+                        <p class="three-name">
+                          <span>人气榜</span>
+                        </p>
+                        <p class="three-title">营养滋补榜</p>
+                        <p class="three-desc">卖爆10.5万件</p>
+                      </li>
+                      <li>
+                        <img class="one" src="https://image2.suning.cn/uimg/cms/img/156929175197393382.png?from=mobile" alt="">
+                        <img class="two" src="//imgservice.suning.cn/uimg1/sniss/improve/vHcS87PoovgCiyD6R1QOXA.jpg?format=_is_200w_200h_4e.webp" alt="">
+                        <p class="three-name">
+                          <span>人气榜</span>
+                        </p>
+                        <p class="three-title">营养滋补榜</p>
+                        <p class="three-desc">卖爆10.5万件</p>
+                      </li>
+                    </ul>
+                
+                  </div>
+                  <div class="bd-one-item new">
+                     
+                        <img class="one" src="https://image3.suning.cn/uimg/cms/img/156929156220838915.png?from=mobile" alt="">
+                        <img class="two" src="//imgservice.suning.cn/uimg1/sniss/improve/73hUAyZI1T2yp6NrMH4ICg.jpg?format=_is_200w_200h_4e.webp" alt="">
+                        <p class="three-name">
+                          <span>趋势榜</span>
+                        </p>
+                        <p class="three-title">高性能洗衣机榜</p>
+                        <p class="three-desc">本月趋势上升121%</p>
+                  
+                  </div>
+              </div>
+              <div class="bd-two">
+                <!-- 人气热销手机、多功能榨汁机 -->
+                    <div class="two-hang">
+                        <div class="two-item bew-bd-item">
+                            <div class="first-text">
+                                <span class="one">人气热销手机榜</span>
+                                <span class="two">人气榜</span>
+                            </div>
+                            <p>卖爆6.0万件</p>
+                             <a href="" class="img-wrapper">
+                              <img src="//imgservice.suning.cn/uimg1/sniss/improve/15szoDUyqbuLGQxt-gJ_lA.jpg?format=_is_200w_200h_4e.webp" alt="">
+                            </a>
+                            <a href="" class="img-wrapper right">
+                              <img src="//imgservice.suning.cn/uimg1/sniss/improve/cuU8pRh5fElLgyd7pIhAgw.jpg?format=_is_200w_200h_4e.webp" alt="">
+                            </a>
+                        </div>
+
+                        <div class="two-item bew-bd-item">
+                            <div class="first-text">
+                                <span class="one">多功能榨汁榜</span>
+                                <span class="two">人气榜</span>
+                            </div>
+                            <p>卖爆2521件</p>
+                             <a href="" class="img-wrapper">
+                              <img src="//imgservice.suning.cn/uimg1/sniss/improve/io0C4jR2Rn5aZRF9T4YLQw.jpg?format=_is_200w_200h_4e.webp" alt="">
+                            </a>
+                            <a href="" class="img-wrapper right">
+                              <img src="//imgservice.suning.cn/uimg1/sniss/improve/TiyzO9vxOT_3P_ZaT4Yycw.jpg?format=_is_200w_200h_4e.webp" alt="">
+                            </a>
+                        </div>
+
+                        
+                       
+                    </div>
+                    <div class="two-hang">
+                        <div class="two-item bew-bd-item">
+                            <div class="first-text">
+                                <span class="one">电热水龙头榜</span>
+                                <span class="two">趋势榜</span>
+                            </div>
+                            <p>本周趋势上升63%</p>
+                             <a href="" class="img-wrapper">
+                              <img src="https://image.suning.cn/uimg/b2c/qrqm/0000000000000000000692790356.jpg?format=_is_200w_200h_4e.webp" alt="">
+                            </a>
+                            <a href="" class="img-wrapper right">
+                              <img src="//imgservice.suning.cn/uimg1/sniss/improve/S-8wAlhC1_U7tWFa8f1zJQ.jpg?format=_is_200w_200h_4e.webp" alt="">
+                            </a>
+                        </div>
+
+                        <div class="two-item bew-bd-item">
+                            <div class="first-text">
+                                <span class="one">便携鼻毛修剪器榜</span>
+                                <span class="two">人气榜</span>
+                            </div>
+                            <p>卖爆8937件</p>
+                             <a href="" class="img-wrapper">
+                              <img src="//imgservice.suning.cn/uimg1/sniss/improve/Uyu6FGBT3Z81PAbWeXzasw.jpg?format=_is_200w_200h_4e.webp" alt="">
+                            </a>
+                            <a href="" class="img-wrapper right">
+                              <img src="https://image.suning.cn/uimg/b2c/qrqm/0070145118000000000170132959.jpg?format=_is_200w_200h_4e.webp" alt="">
+                            </a>
+                        </div>
+                    </div>
+              </div>
+
+            </div>
+          </div>
+          <!-- 猜你喜欢商品列表 -->
+          <div class="guessUlike">
+              <a href="" class="v7-title">
+                <img src="https://image1.suning.cn/uimg/cms/img/157793128909842388.png?format=_is_1242w_100h.webp" alt="">
+              </a>
+              <div class="pro-list-wrapper">
+                  <div class="pro-list">
+                      <div class="left-list">
+                            <div class="kw-wrapper" v-for="(item,index) in list" :key="index" @click="toshopItem">
+                                <div class="pro-image-wrapper">
+                                    <img class="pro-img" :src="item.images" alt="">
+                                </div>
+                                <p class="shangpin-tag">{{item.tag}}</p>
+                                <div class="pro-price">
+                                    <div class="real-price">
+                                      <span class="flag">{{item.price}}</span>
+                                      <span class="price-commnets">{{item.comments}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                      </div>
+                      <div class="right-list">
+                        
+                        <div class="kw-wrapper" v-for="(item,index) in list" :key="index">
+                                <div class="pro-image-wrapper">
+                                    <img class="pro-img" :src="item.images" alt="">
+                                </div>
+                                <p class="shangpin-tag">{{item.tag}}</p>
+                                <div class="pro-price">
+                                    <div class="real-price">
+                                      <span class="flag">{{item.price}}</span>
+                                      <span class="price-commnets">{{item.comments}}</span>
+                                    </div>
+                                </div>
+                            </div></div>
+                  </div>
+              </div>
+          </div>  
+    </div>
+  </div>
 </template>
+<script>
+export default {
+
+  data(){
+    return{
+
+      num:0,
+      hour:5,
+      minute:20,
+      second:60,
+
+      list:[
+        {
+          images:"//imgservice.suning.cn/uimg1/b2c/image/3W6ZyCccJLMOqeHpMcJXqQ.jpg?format=_is_300w_300h_4e.webp",
+          tag:"斜月三星家纺 2条装全棉流星雨毛巾 舒适柔软 成人洗脸巾30*60cm 2条装流星雨毛巾 30*60cm",
+          price:"￥10.01",
+          comments:"1.5万+评价"
+        },
+        {
+          images:"//imgservice.suning.cn/uimg1/b2c/image/T6vpfeqQrWr-K0SHoVL-2w.jpg?format=_is_300w_300h_4e.webp",
+          tag:"想念原味小麦粉5kg 馒头粉 面条粉 饺子包子中筋粉 家庭装通用小麦粉",
+          price:"￥27.9",
+          comments:"6.4万+评价"
+        },
+        {
+          images:"//imgservice.suning.cn/uimg1/b2c/image/1i9MVtDyzNHLz2cO2qk_Qw.jpg?format=_is_300w_300h_4e.webp",
+          tag:"猫山王榴莲饼爆浆流心榴莲酥充饥夜宵休闲糕点零食网红特产 榴莲味12枚",
+          price:"￥9.8",
+          comments:"1.8万+评价"
+        },
+        {
+          images:"//imgservice.suning.cn/uimg1/b2c/image/f_siNdA-dA7eoMeCYhOGow.png?format=_is_300w_300h_4e.webp",
+          tag:"【满20件免运费】1枚装单枚50-60g溢流香 国产 熟咸蛋 咸鸭蛋红泥腌制熟红心咸鸭蛋流油",
+          price:"￥1.25",
+          comments:"1.7万+评价"
+        }
+      ]
+    }
+  },
+  mounted(){
+    setInterval(() => {
+      if(this.num>-11){
+        this.num-=5.5;
+      }else if(this.num<=-11){
+        this.num=0
+      }
+    },2500);
+    setInterval(() => {
+      if(this.second>0){
+        this.second-=1;
+      }else if(this.second<=0){
+        this.second=0;
+      }
+    },1000);
+   
+
+  },
+    methods: {
+    toshopItem() {
+      this.$router.push({
+        path:"/shopitem"
+      });
+    }
+  }
+}
+  
+
+</script>
+<style>
+/* 商品列表 */
+.price-commnets{
+  color: #999999;
+    margin-left: .26rem;
+    font-weight: normal;
+    font-size: .4rem;
+}
+.real-price>.flag{
+  line-height: .56rem;
+}
+.real-price{
+    display: flex;
+    height: .76rem;
+    font-size: .48rem;
+    color: #FF4422;
+    font-weight: bold;
+    align-items: flex-end
+}
+.pro-price{
+  height: .76rem;
+  margin-left: .24rem;
+  line-height: .76rem;
+}
+.shangpin-tag{
+    margin: .36rem auto 0;
+    width: 6.36rem;
+    height: 1.34rem;
+    font-size: .52rem;
+    line-height: .68rem;
+    font-weight: bold;
+    overflow: hidden;
+}
+.pro-img{
+      width: 6.84rem;
+    height: 6.84rem;
+    border-radius: .24rem .24rem 0 0;
+    
+}
+.pro-image-wrapper{
+      position: relative;
+    width: 6.84rem;
+    height: 6.84rem;
+}
+.kw-wrapper{
+
+    position: relative;
+    box-sizing: border-box;
+    width: 6.84rem;
+    overflow: hidden;
+    border-radius: .24rem;
+    margin-bottom: .36rem;
+    background-color: #FFF;
+}
+.right-list{
+  width: 50%;
+}
+.left-list{
+  width: 50%;
+}
+.pro-list{
+  width: 94%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+   justify-content: space-between;
+}
+.v7-title>img{
+  height: 1.2rem;
+
+}
+.v7-title{
+  display: block;
+    width: 94%;
+    height: 1.2rem;
+    margin: 0 auto;
+}
+.guessUlike{
+  width: 100%;
+}
+.two-item>.img-wrapper.right{
+  left: 3.72rem;
+}
+.two-item>.img-wrapper>img{
+    display: block;
+    width: 2.8rem;
+    height: 2.8rem;
+    background: none;
+
+}
+.two-item>.img-wrapper{
+  position: absolute;
+    width: 2.8rem;
+    height: 2.8rem;
+    top: 1.86rem;
+    left: .48rem;
+    overflow: hidden;
+}
+.two-item>p{
+      display: block;
+    width: 6.4rem;
+    height: .6rem;
+    line-height: .6rem;
+    font-size: .48rem;
+    margin-top: .12rem;
+    color: #999;
+}
+.first-text>.two{
+    position: relative;
+    top: .02rem;
+    display: block;
+    background: #F9F5EE;
+    border-radius: .56rem;
+    height: .56rem;
+    line-height: .56rem;
+    font-size: .44rem;
+    color: #AB813A;
+    margin-left: .24rem;
+    padding: 0 .24rem;
+}
+.first-text>.one{
+  display: block;
+    max-width: 4.2rem;
+    height: .64rem;
+    line-height: .64rem;
+    font-size: .52rem;
+    font-weight: bold;
+}
+.first-text{
+display: flex;
+  height: .64rem;
+
+}
+.two-item{
+     position: relative;
+    box-sizing: border-box;
+    width: 50%;
+    height: 4.8rem;
+    background: #FFF;
+    overflow: hidden;
+    padding: .42rem 0 .32rem .36rem;
+
+}
+.two-hang{
+  display: flex;
+    width: 94%;
+    margin: 0 auto;
+}
+.tran-top{
+
+  transition: margin-top 0.5s linear 0s;
+}
+/* 滚动广告 */
+
+.bd-one-item.swiper{
+    width: 4.52rem;
+    height: 5.32rem;
+     background: #FFF;
+     overflow: hidden;
+}
+.three-desc{
+  position: relative;
+    width: 4rem;
+    height: .48rem;
+    line-height: .48rem;
+    font-size: .44rem;
+    margin: 0 auto;
+    color: #FFFFFF;
+    opacity: .8;
+    text-align: center;
+    overflow: hidden;
+
+}
+.three-title{
+    position: relative;
+    width: 4.4rem;
+    height: .64rem;
+    font-size: .52rem;
+    line-height: .64rem;
+    margin: .62rem auto .06rem;
+    color: #FFFFFF;
+    text-align: center;
+    overflow: hidden;
+}
+.three-name>span{
+    display: block;
+    height: .68rem;
+    font-size: .44rem;
+    line-height: .6rem;
+     background: #FFF;
+    color: #D9A87A;
+    border: .04rem solid #D9A87A;
+    border-radius: .34rem;
+    text-align: center;
+    margin: 0 auto;
+    overflow: hidden;
+
+}
+.three-name{
+  position: absolute;
+    width: 100%;
+    height: .68rem;
+    top: 3rem;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.bd-one-item>.two{
+  position: relative;
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    margin: .3rem auto 0;
+
+}
+.bd-one-item>.one{
+    position: absolute;
+    width: 4.52rem;
+    height: 1.86rem;
+    left: 0;
+    bottom: 0;
+    border-radius: 0 0 .24rem .24rem;
+}
+.bd-one-item li>.one{
+    position: absolute;
+    width: 4.52rem;
+    height: 1.86rem;
+    left: 0;
+    bottom: 0.4rem;
+    border-radius: 0 0 .24rem .24rem;
+}
+.bd-one-item li>.two{
+ position: relative;
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    margin: .3rem auto 0;
+
+}
+.bd-one-item li{
+    position: relative;
+    width: 4.52rem;
+    height: 5.32rem;
+    border-radius: .24rem;
+    background: #FFF;
+    list-style: none
+    ;
+}
+.bd-one-item.new{
+    position: relative;
+    width: 4.52rem;
+    height: 5.32rem;
+    border-radius: .24rem;
+    background: #FFF;
+}
+.bd-three{
+  width: 94%;
+   margin: 0 auto .26rem;
+   display: flex;
+  justify-content: space-between;
+}
+/* 推荐榜单 */
+.new-bd>.title-image{
+  width: 94%;
+  height: 1.2rem;
+  margin: 0 auto;
+}
+.new-bd img{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+/* 为您推荐四个商品 */
+.img-wrapper>img{
+    width: 2rem;
+    height: 2rem;
+}
+
+
+.img-wrapper{
+    position: absolute;
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    top: .36rem;
+    left: .2rem;
+}
+.click-area>p{
+      position: absolute;
+    top: 2.48rem;
+    left: 0;
+    width: 2.4rem;
+    height: .6rem;
+    line-height: .6rem;
+    font-size: .44rem;
+    text-align: center;
+    color: #333;
+    overflow: hidden;
+}
+.click-area{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.four-item{
+  position: relative;
+    box-sizing: border-box;
+    width: 2.4rem;
+    height: 3.44rem;
+}
+.four-space{
+    display: flex;
+    width: 10.16rem;
+    height: 3.44rem;
+    justify-content: space-between;
+}
+
+/* 为您推荐上面的线 */
+.space-px{
+    width: 94%;
+    height: 1px;
+    margin: 0 auto;
+    background: #f2f2f2;
+}
+/* 为您推荐 */
+a{
+    text-decoration: none;
+}
+.title-four{
+    display: flex;
+    width: 94%;
+    height: 3.44rem;
+    background: #FFF;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.left-title{
+    width: 3.46rem;
+    height: 3.44rem;
+    padding: .94rem .36rem 0 .36rem;
+}
+.left-title p.title{
+    width: 2.74rem;
+    height: .9rem;
+    line-height: .9rem;
+    font-size: .64rem;
+    color: #444;
+    font-weight: bold;
+}
+.left-title p.desc{
+    width: 2.74rem;
+    height: .64rem;
+    line-height: .64rem;
+    font-size: .48rem;
+    color: #999;
+}
+/* 苏宁秒杀 */
+.lazyimg.img {
+  position: relative;
+}
+.img-desc {
+  position: absolute;
+  bottom:-0.3rem;
+  left: 0.2rem;
+  background-size: 3rem 1.08rem;
+  width: 3rem;
+  height: 1.08rem;
+  padding-top: 0.44rem;
+  line-height: 0.64rem;
+  overflow: hidden;
+  font-size: 0.4rem;
+  text-align: center;
+  background-image: url(../images/img-desc.png);
+}
+.img-desc.right {
+  bottom:-0.3rem;
+  left: 3.7rem;
+}
+.hor-gap {
+  width: 1px;
+  height: 100%;
+  line-height: 0;
+  background: #f2f2f2;
+}
+body {
+  background-color: #f7f7f7;
+}
+html {
+  font-size: 1.5rem;
+}
+.index-nav {
+  position: relative;
+  width: 100%;
+  height: 3.6rem;
+}
+.index-nav-tag {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3.6rem;
+}
+.index-nav-tag img {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 132.2rem;
+}
+.type.top-type {
+  position: relative;
+  width: 100%;
+}
+.content-wrap-one {
+  width: 90%;
+  height: 1.76rem;
+  margin: 0 auto;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content-wrap-one img {
+  width: 0.72rem;
+  height: 1.2rem;
+}
+.top-wrapper.middel-style {
+  display: flex;
+  height: 1.76rem;
+  align-items: center;
+}
+.middel-style img {
+  width: 7.8rem;
+  height: 1.52rem;
+}
+.content-wrap-two {
+  width: 100%;
+  height: 1.84rem;
+  box-sizing: border-box;
+  padding: 0 0.48rem;
+}
+/* 搜索 */
+.search-bar {
+  position: relative;
+}
+.searchInput {
+  border: none;
+  border-radius: 0.6rem;
+  padding: 0.06rem 0.4rem 0 1.3rem;
+  width: 90%;
+  height: 1.28rem;
+  line-height: 1.28rem;
+  background: #fff;
+  font-size: 0.56rem;
+  color: #999999;
+}
+.searchIcont {
+  position: absolute;
+  width: 0.72rem;
+  height: 0.72rem;
+  top: 0.45rem;
+  left: 0.4rem;
+  background-image: url(../images/searchI.png);
+  background-size: 0.72rem 0.72rem;
+}
+/* 轮播图 */
+.index-wrap {
+  position: relative;
+}
+.v7-banner {
+  height: 4.58rem;
+}
+.v7-banner > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4.58rem;
+}
+.swiper-wrapper {
+  position: absolute;
+  width: 90%;
+  height: 4.58rem;
+  top: 0;
+  left: 5%;
+}
+.v7-zdy {
+  width: 100%;
+  height: 5.615rem;
+  margin-top: 5px;
+}
+.v7-zdy img {
+  width: 33.33%;
+}
+.enter-list {
+  width: 100%;
+  height: 6.4rem;
+  margin-top: 20px;
+}
+.enter-wrapper {
+  width: 100%;
+  height: 6.4rem;
+}
+.enter-wrapper > a {
+  width: 20%;
+  float: left;
+  height: 50%;
+  text-decoration: none;
+  /* text-align: center; */
+}
+.enter-img {
+  width: 1.68rem;
+  height: 1.68rem;
+  margin: 0.48rem auto 0;
+}
+.enter-img > img {
+  width: 1.68rem;
+  height: 1.68rem;
+}
+.enter-img > .title {
+  line-height: 0.56rem;
+  width: 3rem;
+  height: 0.56rem;
+  font-size: 0.44rem;
+  margin-top: 0.1rem;
+  color: #666;
+}
+.newImgFloor {
+  width: 100%;
+  height: 4.68rem;
+  margin-top: 1rem;
+}
+
+.content-item1 > img {
+  width: 50%;
+  height: 4.68rem;
+}
+
+.content-item > img {
+  width: 25%;
+  height: 4.68rem;
+}
+.hor-view.kw {
+  width: 94%;
+  height: 5.16rem;
+  margin: 0 auto;
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+}
+.lazyimg {
+  width: 50%;
+  height: 5.16rem;
+  overflow: hidden;
+}
+.title-wrapper {
+  width: 7rem;
+  height: 1.16rem;
+  justify-content: start;
+  align-items: flex-end;
+}
+.title-wrapper > .title {
+  font-weight: 700;
+  font-size: 0.56rem;
+  width: 40%;
+  height: 0.8rem;
+  margin: 0.36rem 0.16rem 0 0.48rem;
+  color: #333;
+  display: inline-block;
+}
+.count {
+  height: 0.8rem;
+  font-size: 0.05rem;
+  display: inline-block;
+}
+.count > span {
+  height: 0.68rem;
+  width: 0.68rem;
+  border-radius: 30%;
+  background-color: #ffcc00;
+}
+.desc {
+  font-size: 0.48rem;
+  color: #999;
+  margin: 0.08rem 0 0 0.48rem;
+  width: 6rem;
+  height: 0.6rem;
+  line-height: 0.6rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 0.08rem;
+}
+.shop-items {
+  width: 7rem;
+  padding-left: 0.56rem;
+  margin: 0.1rem 0 0 0;
+  
+}
+.shop-item-left {
+  margin-right: 1.1rem;
+  display: inline-block;
+}
+.shop-item-right {
+  width: 2.4rem;
+  display: inline-block;
+}
+.shop-item-left > img {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.shop-item-right > img {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.tag-price {
+  text-align: center;
+  color: #f50;
+  font-size: 0.44rem;
+  line-height: 0.56rem;
+  height: 0.56rem;
+  margin-top: 0.02rem;
+}
+</style>

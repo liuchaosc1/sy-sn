@@ -92,7 +92,7 @@ export default {
         align-items: center;
     }
     .top>div:first-child>span{
-        font-size: 115%;
+        font-size: 75%;
     }
     .search{
         /* background-color: indigo; */
