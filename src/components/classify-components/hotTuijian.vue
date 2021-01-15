@@ -279,6 +279,7 @@ display: flex;
 .movebox{
   overflow: auto;
   width: 89%;
+  height: 100%;
 }
 
 .movebox>div{

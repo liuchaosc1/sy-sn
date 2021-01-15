@@ -1,8 +1,30 @@
 <template>
   <!-- 猜你喜欢页面 -->
-  <div>
+  <div ref="scro" @scrollY="fun1">
     <!-- 轮播图上方内容 -->
-    <div class="sn-nav-wrapper">
+    <div class="sn-nav-wrapper" >
+         <!-- 遮罩层 -->
+        <div class="hidden-container" :style="'opacity:'+num2">
+            <div class="hidden-wrapper">
+            <a href="">
+              <img
+                src="https://image1.suning.cn/uimg/cms/img/157199320847433454.png"
+                alt=""
+              />
+            </a>
+            <div class="wrapper-middel-style">
+              <a href="https://cuxiao.m.suning.com/scms/ndxdhc.html">
+                <input type="text" placeholder="年货礼盒200减210">
+              </a>
+            </div>
+            <a href="">
+              <img
+                src="https://image2.suning.cn/uimg/cms/img/157199321817918653.png"
+                alt=""
+              />
+            </a>
+          </div>
+        </div>
       <div class="index-nav">
         <div class="index-nav-tag">
           <img
@@ -11,6 +33,7 @@
           />
         </div>
         <div class="type top-type">
+       
           <!-- 最上方广告 -->
           <div class="content-wrap-one">
             <a href="">
@@ -43,17 +66,19 @@
               <i class="searchIcont"></i>
             </div>
             <form>
-              <input
+              <a href="https://m.suning.com/search.html?defaultWord=%E5%B9%B4%E8%B4%A7%E8%B1%AA%E7%A4%BC%E7%81%AB%E7%88%86%E9%A2%84%E5%94%AE%E4%B8%AD">
+                <input
                 type="text"
                 placeholder="年货礼盒200减210"
                 class="searchInput"
               />
+              </a>
             </form>
           </div>
         </div>
       </div>
     </div>
-    <div class="index-wrap">
+    <div class="index-wrap" >
       <!-- 轮播图内容 -->
       <div class="v7-banner">
         <img
@@ -180,6 +205,7 @@
           </a>
         </div>
       </div>
+      
       <!-- 新人礼广告 -->
       <div class="newImgFloor">
         <div class="newImgFloor-content">
@@ -532,6 +558,9 @@
               </div>
           </div>  
     </div>
+    <div class="ToLogin" v-show="login" @click="toLogin">
+      <img src="https://image3.suning.cn/uimg/cms/img/157588645542963955.png" alt="">
+    </div>
   </div>
 </template>
 <script>
@@ -539,12 +568,13 @@ export default {
 
   data(){
     return{
-
+      login:this.$store.state.login,
       num:0,
       hour:5,
       minute:20,
       second:60,
-
+      num1:0,
+      num2:0,
       list:[
         {
           images:"//imgservice.suning.cn/uimg1/b2c/image/3W6ZyCccJLMOqeHpMcJXqQ.jpg?format=_is_300w_300h_4e.webp",
@@ -572,30 +602,44 @@ export default {
         }
       ]
     }
-  },
-  mounted(){
-    // setInterval(() => {
-    //   if(this.num>-11){
-    //     this.num-=5.5;
-    //   }else if(this.num<=-11){
-    //     this.num=0
-    //   }
-    // },2500);
-    // setInterval(() => {
-    //   if(this.second>0){
-    //     this.second-=1;
-    //   }else if(this.second<=0){
-    //     this.second=0;
-    //   }
-    // },1000);
    
-
   },
+   
+  mounted(){
+    setInterval(() => {
+      if(this.num>-11){
+        this.num-=5.5;
+      }else if(this.num<=-11){
+        this.num=0
+      }
+    },2500);
+    setInterval(() => {
+      if(this.second>0){
+        this.second-=1;
+      }else if(this.second<=0){
+        this.second=59;
+      }
+    },1000);
+    let that =this;
+    
+  
+  },
+  
     methods: {
     toshopItem() {
       this.$router.push({
         path:"/shopitem"
       });
+    },
+    fun1(){
+      this.num1=$ref.scro.scrollY;
+        if(this.num1>100){
+          this.num2=1
+        }
+        console.log(this.num1);
+    },
+    toLogin(){
+      this.$store.state.componentName="my-mine"
     }
   }
 }
@@ -603,6 +647,49 @@ export default {
 
 </script>
 <style>
+/* 去登录 */
+.ToLogin{
+  height: 1.8rem;
+  width: 100%;
+  position: fixed;
+  bottom:2rem;
+}
+.ToLogin>img{
+  height: 2rem;
+  width: 100%;
+}
+.hidden-container{
+  width:100%;
+   height: 1.76rem;
+   background: #FFDB47;
+  
+  position: fixed;
+  z-index: 222;
+}
+.hidden-wrapper{
+  
+  width: 95%;
+  height: 1.76rem;
+  margin: 0 auto;
+  display: -webkit-flex;
+  justify-content: space-between;
+}
+.hidden-wrapper img{
+  width: 0.72rem;
+    height: 1.2rem;
+    
+}
+.wrapper-middel-style input{
+ border: none;
+  border-radius: 0.6rem;
+  padding: 0.06rem 0.4rem 0 1.3rem;
+  width: 90%;
+  height: 1.28rem;
+  line-height: 1.28rem;
+  background: #fff;
+  font-size: 0.56rem;
+  color: #999999;
+}
 /* 商品列表 */
 .price-commnets{
   color: #999999;
@@ -986,12 +1073,8 @@ a{
   line-height: 0;
   background: #f2f2f2;
 }
-body {
-  background-color: #f7f7f7;
-}
-html {
-  font-size: 1.5rem;
-}
+
+
 .index-nav {
   position: relative;
   width: 100%;
