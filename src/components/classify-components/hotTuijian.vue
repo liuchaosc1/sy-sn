@@ -61,13 +61,14 @@ export default {
     xhr.onload = function () {
       let list = JSON.parse(xhr.response);
       // console.log(list);
-      for (let i = 1; i < list.length; i++) {
+      for (let i = 0; i < list.length; i++) {
         // console.log(list[i].title)
         if (list[i].title == that.title) {
           that.productList = list[i];
         }
       }
       that.className =  that.productList.content[0].class
+      // console.log(that.productList.content)
      
     };
     
@@ -98,14 +99,14 @@ export default {
     xhr.onload = function () {
       let list = JSON.parse(xhr.response);
       // console.log(list);
-      for (let i = 1; i < list.length; i++) {
+      for (let i = 0; i < list.length; i++) {
         
         if (list[i].title == that.title) {
           that.productList = list[i];
         }
       }
       that.className =  that.productList.content[0].class
-      
+      // console.log(that.productList.content)
     };
     },
     scroll(newVal){
@@ -280,6 +281,7 @@ display: flex;
   overflow: auto;
   height: 100%;
   width: 89%;
+  height: 100%;
 }
 
 .movebox>div{

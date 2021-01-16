@@ -746,211 +746,6 @@
        ] 
     },
     {
-        "title":"餐巾纸" ,
-       "content":[
-        {
-            "class":"手机",
-            "main":[
-                {
-                    "name":"小米10",
-                    "pic":"imgLiPop/小米10至尊纪念版.webp"
-                },{
-                    "name":"小米10",
-                    "pic":"imgLiPop/小米10.webp"
-                },{
-                    "name":"小米10&nbsp",
-                    "pic":"imgLiPop/小米10青春版.webp"
-                },{
-                    "name":"RedmiK&nbsp",
-                    "pic":"imgLiPop/RedmiK30S至尊纪念版.webp"
-                },{
-                    "name":"RedmiK&nbsp",
-                    "pic":"imgLiPop/RedmiK30至尊纪念版.webp"
-                },{
-                    "name":"小米云服务",
-                    "pic":"imgLiPop/小米云服务.jpg"
-                },{
-                    "name":"Redmi&nbsp",
-                    "pic":"imgLiPop/RedmiK30Pro变焦版.webp"
-                },{
-                    "name":"Redmi&nbspG",
-                    "pic":"imgLiPop/RedmiK305G.webp"
-                },{
-                    "name":"Redmi&nbs",
-                    "pic":"imgLiPop/RedmiK304G.webp"
-                }
-
-            ]
-        },
-        {
-            "class":"电话卡",
-            "main":[
-                {
-                    "name":"Redmi 10X Pro",
-                    "pic":"imgLiPop/Redmi10XPro.webp"
-                },{
-                    "name":"Redmi 10X 5G",
-                    "pic":"imgLiPop/Redmi10X5G.webp"
-                },{
-                    "name":"Redmi 10X 4G",
-                    "pic":"imgLiPop/Redmi10X4G.webp"
-                },{
-                    "name":"Redmi Note9 Pro",
-                    "pic":"imgLiPop/RedmiNote9Pro.webp"
-                },{
-                    "name":"Redmi Note9 5G",
-                    "pic":"imgLiPop/RedmiNote95G.webp"
-                },{
-                    "name":"Redmi Note9 4G",
-                    "pic":"imgLiPop/RedmiNote94G.webp"
-                },{
-                    "name":"Redmi Note8 Pro",
-                    "pic":"imgLiPop/RedmiNote8Pro.webp"
-                },{
-                    "name":"Redmi Note8",
-                    "pic":"imgLiPop/RedmiNote8.webp"
-                },{
-                    "name":"手机上门维修",
-                    "pic":"imgLiPop/手机上门维修.png"
-                },{
-                    "name":"Redmi 9",
-                    "pic":"imgLiPop/Redmi9.webp"
-                },{
-                    "name":"Redmi 9A",
-                    "pic":"imgLiPop/Redmi9A.webp"
-                },{
-                    "name":"Redmi 8",
-                    "pic":"imgLiPop/Redmi8.webp"
-                },{
-                    "name":"Redmi 8A",
-                    "pic":"imgLiPop/Redmi8A.webp"
-                },{
-                    "name":"腾讯黑鲨鱼",
-                    "pic":"imgLiPop/腾讯黑鲨鱼游戏手机.webp"
-                },{
-                    "name":"中国电信",
-                    "pic":"imgLiPop/中国电信.webp"
-                }
-            ]
-        },
-        {
-            "class":"电视",
-            "main":[
-                {
-                    "name":"小米透明",
-                    "pic":"imgLiPop/dianshi1.webp"
-                },{
-                    "name":"小米电视5",
-                    "pic":"imgLiPop/dianshi2.webp"
-                },{
-                    "name":"小米电视5 ",
-                    "pic":"imgLiPop/dianshi3.webp"
-                },{
-                    "name":"Redmi ",
-                    "pic":"imgLiPop/dianshi4.webp"
-                },{
-                    "name":"量子点电视",
-                    "pic":"imgLiPop/dianshi5.webp"
-                },{
-                    "name":"Redmi ",
-                    "pic":"imgLiPop/dianshi6.webp"
-                },{
-                    "name":"小米电视",
-                    "pic":"imgLiPop/dianshi7.webp"
-                },{
-                    "name":"小米电视",
-                    "pic":"imgLiPop/dianshi8.webp"
-                },{
-                    "name":"小米电视",
-                    "pic":"imgLiPop/dianshi9.webp"
-                }
-            ]
-        },
-        {
-            "class":"机顶盒",
-            "main":[
-                {
-                    "name":"小米全面",
-                    "pic":"imgLiPop/dianshi10.webp"
-                },{
-                    "name":"金属全",
-                    "pic":"imgLiPop/dianshi11.webp"
-                },{
-                    "name":"小米盒子",
-                    "pic":"imgLiPop/dianshi12.jpg"
-                },{
-                    "name":"大师电视 ",
-                    "pic":"imgLiPop/dianshi13.webp"
-                },{
-                    "name":"小米电视5 ",
-                    "pic":"imgLiPop/dianshi14.webp"
-                },{
-                    "name":"小米电视",
-                    "pic":"imgLiPop/dianshi15.webp"
-                },{
-                    "name":"Redmi  ",
-                    "pic":"imgLiPop/dianshi16.webp"
-                },{
-                    "name":"小米全面",
-                    "pic":"imgLiPop/dianshi17.jpg"
-                },{
-                    "name":"电视音箱",
-                    "pic":"imgLiPop/dianshi18.webp"
-                },{
-                    "name":"Redmi ",
-                    "pic":"imgLiPop/dianshi19.webp"
-                },{
-                    "name":"小米电视5 ",
-                    "pic":"imgLiPop/dianshi20.webp"
-                },{
-                    "name":"小米电视4A ",
-                    "pic":"imgLiPop/dianshi21.webp"
-                },{
-                    "name":"小米电视4S ",
-                    "pic":"imgLiPop/dianshi22.webp"
-                },{
-                    "name":"小米壁画电视",
-                    "pic":"imgLiPop/dianshi23.jpg"
-                },{
-                    "name":"中国电信",
-                    "pic":"imgLiPop/dianshi24.webp"
-                }
-            ]
-        },
-        {
-            "class":"笔记本",
-            "main":[
-                {
-                    "name":"Redmi G 游戏本",
-                    "pic":"imgLiPop/xianshi1.webp"
-                },{
-                    "name":"小米笔记本Air 13.3”",
-                    "pic":"imgLiPop/xianshi2.png"
-                },{
-                    "name":"键鼠套装",
-                    "pic":"imgLiPop/xianshi3.webp"
-                },{
-                    "name":"RedmiBook ",
-                    "pic":"imgLiPop/xianshi4.webp"
-                },{
-                    "name":"小米笔记本 Air 12. 5”",
-                    "pic":"imgLiPop/xianshi5.jpg"
-                },{
-                    "name":"鼠标",
-                    "pic":"imgLiPop/xianshi6.png"
-                },{
-                    "name":"RedmiBook 16",
-                    "pic":"imgLiPop/xianshi7.webp"
-                },{
-                    "name":"小米游戏本",
-                    "pic":"imgLiPop/xianshi8.jpg"
-                }
-            ]
-        }
-
-       ] 
-    },
-    {
         "title":"热门推的",
         "banner":"../classify-rementuijian/banner.jpg",
         "content":[
@@ -1690,211 +1485,7 @@
 
        ] 
     },
-    {
-        "title":"餐巾纸头" ,
-       "content":[
-        {
-            "class":"手机",
-            "main":[
-                {
-                    "name":"小米10",
-                    "pic":"imgLiPop/小米10至尊纪念版.webp"
-                },{
-                    "name":"小米10",
-                    "pic":"imgLiPop/小米10.webp"
-                },{
-                    "name":"小米10",
-                    "pic":"imgLiPop/小米10青春版.webp"
-                },{
-                    "name":"RedmiK",
-                    "pic":"imgLiPop/RedmiK30S至尊纪念版.webp"
-                },{
-                    "name":"RedmiK",
-                    "pic":"imgLiPop/RedmiK30至尊纪念版.webp"
-                },{
-                    "name":"小米云服务",
-                    "pic":"imgLiPop/小米云服务.jpg"
-                },{
-                    "name":"Redmi",
-                    "pic":"imgLiPop/RedmiK30Pro变焦版.webp"
-                },{
-                    "name":"Redmi",
-                    "pic":"imgLiPop/RedmiK305G.webp"
-                },{
-                    "name":"Redmi",
-                    "pic":"imgLiPop/RedmiK304G.webp"
-                }
-
-            ]
-        },
-        {
-            "class":"电话卡",
-            "main":[
-                {
-                    "name":"Redmi 10X",
-                    "pic":"imgLiPop/Redmi10XPro.webp"
-                },{
-                    "name":"Redmi 10X",
-                    "pic":"imgLiPop/Redmi10X5G.webp"
-                },{
-                    "name":"Redmi 10X",
-                    "pic":"imgLiPop/Redmi10X4G.webp"
-                },{
-                    "name":"Redmi Note9",
-                    "pic":"imgLiPop/RedmiNote9Pro.webp"
-                },{
-                    "name":"Redmi Note9 ",
-                    "pic":"imgLiPop/RedmiNote95G.webp"
-                },{
-                    "name":"Redmi Note9 ",
-                    "pic":"imgLiPop/RedmiNote94G.webp"
-                },{
-                    "name":"Redmi Note8 ",
-                    "pic":"imgLiPop/RedmiNote8Pro.webp"
-                },{
-                    "name":"Redmi Note8",
-                    "pic":"imgLiPop/RedmiNote8.webp"
-                },{
-                    "name":"手机上门维修",
-                    "pic":"imgLiPop/手机上门维修.png"
-                },{
-                    "name":"Redmi 9",
-                    "pic":"imgLiPop/Redmi9.webp"
-                },{
-                    "name":"Redmi 9A",
-                    "pic":"imgLiPop/Redmi9A.webp"
-                },{
-                    "name":"Redmi 8",
-                    "pic":"imgLiPop/Redmi8.webp"
-                },{
-                    "name":"Redmi",
-                    "pic":"imgLiPop/Redmi8A.webp"
-                },{
-                    "name":"腾讯黑鲨鱼",
-                    "pic":"imgLiPop/腾讯黑鲨鱼游戏手机.webp"
-                },{
-                    "name":"中国电信",
-                    "pic":"imgLiPop/中国电信.webp"
-                }
-            ]
-        },
-        {
-            "class":"电视",
-            "main":[
-                {
-                    "name":"小米透明",
-                    "pic":"imgLiPop/dianshi1.webp"
-                },{
-                    "name":"小米电视5",
-                    "pic":"imgLiPop/dianshi2.webp"
-                },{
-                    "name":"小米电视5 ",
-                    "pic":"imgLiPop/dianshi3.webp"
-                },{
-                    "name":"Redmi ",
-                    "pic":"imgLiPop/dianshi4.webp"
-                },{
-                    "name":"量子点电视",
-                    "pic":"imgLiPop/dianshi5.webp"
-                },{
-                    "name":"Redmi ",
-                    "pic":"imgLiPop/dianshi6.webp"
-                },{
-                    "name":"小米电视",
-                    "pic":"imgLiPop/dianshi7.webp"
-                },{
-                    "name":"小米电视",
-                    "pic":"imgLiPop/dianshi8.webp"
-                },{
-                    "name":"小米电视",
-                    "pic":"imgLiPop/dianshi9.webp"
-                }
-            ]
-        },
-        {
-            "class":"机顶盒",
-            "main":[
-                {
-                    "name":"小米全面",
-                    "pic":"imgLiPop/dianshi10.webp"
-                },{
-                    "name":"金属全",
-                    "pic":"imgLiPop/dianshi11.webp"
-                },{
-                    "name":"小米盒子",
-                    "pic":"imgLiPop/dianshi12.jpg"
-                },{
-                    "name":"大师电视 ",
-                    "pic":"imgLiPop/dianshi13.webp"
-                },{
-                    "name":"小米电视5 ",
-                    "pic":"imgLiPop/dianshi14.webp"
-                },{
-                    "name":"小米电视",
-                    "pic":"imgLiPop/dianshi15.webp"
-                },{
-                    "name":"Redmi  ",
-                    "pic":"imgLiPop/dianshi16.webp"
-                },{
-                    "name":"小米全面",
-                    "pic":"imgLiPop/dianshi17.jpg"
-                },{
-                    "name":"电视音箱",
-                    "pic":"imgLiPop/dianshi18.webp"
-                },{
-                    "name":"Redmi ",
-                    "pic":"imgLiPop/dianshi19.webp"
-                },{
-                    "name":"小米电视5 ",
-                    "pic":"imgLiPop/dianshi20.webp"
-                },{
-                    "name":"小米电视4A ",
-                    "pic":"imgLiPop/dianshi21.webp"
-                },{
-                    "name":"小米电视4S ",
-                    "pic":"imgLiPop/dianshi22.webp"
-                },{
-                    "name":"小米壁画电视",
-                    "pic":"imgLiPop/dianshi23.jpg"
-                },{
-                    "name":"中国电信",
-                    "pic":"imgLiPop/dianshi24.webp"
-                }
-            ]
-        },
-        {
-            "class":"笔记本",
-            "main":[
-                {
-                    "name":"游戏本",
-                    "pic":"imgLiPop/xianshi1.webp"
-                },{
-                    "name":"小米笔记本",
-                    "pic":"imgLiPop/xianshi2.png"
-                },{
-                    "name":"键鼠套装",
-                    "pic":"imgLiPop/xianshi3.webp"
-                },{
-                    "name":"RedmiBook ",
-                    "pic":"imgLiPop/xianshi4.webp"
-                },{
-                    "name":"小米笔记本",
-                    "pic":"imgLiPop/xianshi5.jpg"
-                },{
-                    "name":"鼠标",
-                    "pic":"imgLiPop/xianshi6.png"
-                },{
-                    "name":"RedmiBook",
-                    "pic":"imgLiPop/xianshi7.webp"
-                },{
-                    "name":"小米游戏本",
-                    "pic":"imgLiPop/xianshi8.jpg"
-                }
-            ]
-        }
-
-       ] 
-    },
+    
     {
         "title":"热门推的1",
         "banner":"../classify-rementuijian/banner.jpg",
@@ -2435,6 +2026,308 @@
             ]
         }
        ]
+    },
+    {
+        "title":"电脑办公f" ,
+       "content":[
+        {
+            "class":"热销品牌",
+            "main":[
+                {
+                    "pic":"classify-diannaobangong/a1.jpg"
+                    
+                },
+                {
+                    "pic":"classify-diannaobangong/a2.jpg"
+                   
+                },
+                {
+                    "pic":"classify-diannaobangong/a3.jpg"
+                   
+                },
+                {
+                    "pic":"classify-diannaobangong/a4.png"
+                   
+                },
+                {
+                    "pic":"classify-diannaobangong/a5.jpg"
+                    
+                },
+                {
+                    "pic":"classify-diannaobangong/a6.jpg"
+                    
+                },
+                {
+                    "pic":"classify-diannaobangong/a7.jpg"
+                   
+                },
+                {
+                    "pic":"classify-diannaobangong/a8.jpg"
+                   
+                },
+                {
+                    "pic":"classify-diannaobangong/a9.jpg"
+                   
+                },
+                {
+                    "pic":"classify-diannaobangong/a10.jpg"
+                   
+                },
+                {
+                    "pic":"classify-diannaobangong/a11.jpg"
+                   
+                },
+                {
+                    "pic":"classify-diannaobangong/a12.png"
+                   
+                },
+                {
+                    "pic":"classify-diannaobangong/a13.jpg"
+                    
+                },
+                {
+                    "pic":"classify-diannaobangong/a14.jpg"
+                   
+                },
+                {
+                    "pic":"classify-diannaobangong/a15.jpg"
+                    
+                }
+
+            ]
+        },
+        {
+            "class":"摄像摄影",
+            "main":[
+                {
+                    "pic":"classify-diannaobangong/c1.jpg",
+                    "name":"单反相机"             
+                },                                 
+                {                                  
+                    "pic":"classify-diannaobangong/c2.jpg",
+												   
+                    "name":"数码相机"              
+                },                                 
+                {                                  
+                    "pic":"classify-diannaobangong/c3.jpg",
+												   
+                    "name":"微单相机"           
+                },                                 
+                {                                  
+                    "pic":"classify-diannaobangong/c4.jpg",
+												   
+                    "name":"拍立得"             
+                },                                 
+                {                                  
+                    "pic":"classify-diannaobangong/c5.jpg",
+												  
+                    "name":"摄像机"                 
+                },                                
+                {                                 
+                    "pic":"classify-diannaobangong/c6.jpg",
+												   
+                    "name":"运动相机"           
+                },                                 
+                {                                  
+                    "pic":"classify-diannaobangong/c7.jpg",
+												   
+                    "name":"镜头"             
+                },                                 
+                {                                  
+                    "pic":"classify-diannaobangong/c8.jpg",
+												   
+                    "name":"户外器材"             
+                }
+            ]
+        },
+        {
+            "class":"电脑外设",
+            "main":[
+                {
+                    "pic":"classify-diannaobangong/d1.jpg",
+                    "name":"燃气热水器"            
+                },                                
+                {                                 
+                    "pic":"classify-diannaobangong/d2.jpg",
+												   
+                    "name":"电热水器"              
+                },                                 
+                {                                  
+                    "pic":"classify-diannaobangong/d3.jpg",
+												   
+                    "name":"即热式热水器"           
+                },                                 
+                {                                  
+                    "pic":"classify-diannaobangong/d4.jpg",
+												   
+                    "name":"电热水龙头"             
+                },                                 
+                {                                  
+                    "pic":"classify-diannaobangong/d5.jpg",
+												   
+                    "name":"厨宝"                  
+                },                                 
+                {                                  
+                    "pic":"classify-diannaobangong/d6.jpg",
+												   
+                    "name":"太阳能热水器"           
+                },                                 
+                {                                  
+                    "pic":"classify-diannaobangong/d7.jpg",
+												   
+                    "name":"智能马桶盖"             
+                },                                 
+                {                                  
+                    "pic":"classify-diannaobangong/d8.jpg",
+												   
+                    "name":"电动晾衣架"             
+                }
+            ]
+        },
+        {
+            "class":"网络产品",
+            "main":[
+                {
+                    "pic":"classify-diannaobangong/e1.jpg",
+                    "name":"网络产品"              
+                },                                 
+                {                                  
+                    "pic":"classify-diannaobangong/e2.jpg",
+												   
+                    "name":"无线网卡"              
+                },                                 
+                {                                  
+                    "pic":"classify-diannaobangong/e3.jpg",
+												   
+                    "name":"信号放大器"             
+                },                                 
+                {                                  
+                    "pic":"classify-diannaobangong/e4.jpg",
+												   
+                    "name":"随声wifi"              
+                },                                 
+                {                                  
+                    "pic":"classify-diannaobangong/e5.jpg",
+												   
+                    "name":"网线"                  
+                },                                 
+                {                                  
+                    "pic":"classify-diannaobangong/e6.jpg",
+												   
+                    "name":"交换机"                
+                },                                 
+                {                                  
+                    "pic":"classify-diannaobangong/e7.jpg",
+												   
+                    "name":"网络存储"             
+                }
+            ]
+        }
+
+       ] 
+    },
+    
+    {
+        "title":"热门推的l",
+        "banner":"../classify-rementuijian/banner.jpg",
+        "content":[
+            {
+                "class":"热门推荐",
+                "main":[
+                    {
+                        "pic":"../classify-rementuijian/a1.jpg",
+                        "name":"手机"
+                    },
+                    {
+                        "pic":"../classify-rementuijian/a2.jpg",
+                        "name":"笔记本"
+                    },
+                    {
+                        "pic":"../classify-rementuijian/a3.jpg",
+                        "name":"平板电脑"
+                    },
+                    {
+                        "pic":"../classify-rementuijian/a4.jpg",
+                        "name":"热水器"
+                    },
+                    {
+                        "pic":"../classify-rementuijian/a5.jpg",
+                        "name":"取暖器"
+                    },
+                    {
+                        "pic":"../classify-rementuijian/a6.jpg",
+                        "name":"羽绒服"
+                    },
+                    {
+                        "pic":"../classify-rementuijian/a7.jpg",
+                        "name":"护肤套装"
+                    }
+                    ,
+                    {
+                        "pic":"../classify-rementuijian/a8.jpg",
+                        "name":"空调"
+                    },
+                    {
+                        "pic":"../classify-rementuijian/a9.jpg",
+                        "name":"电视"
+                    },
+                    {
+                        "pic":"../classify-rementuijian/a10.jpg",
+                        "name":"冰箱"
+                    },
+                    {
+                        "pic":"../classify-rementuijian/a11.jpg",
+                        "name":"洗衣机"
+                    },
+                    {
+                        "pic":"../classify-rementuijian/a12.png",
+                        "name":"奶粉"
+                    }
+
+                ]
+            },
+            {
+                "class":"特色频道",
+                "main":[
+                    {
+                        "pic":"classify-rementuijian/b1.jpg",
+                        "name":"苏宁电竞"
+                    },
+                    {
+                        "pic":"classify-rementuijian/b2.png",
+                        "name":"Super会员"
+                    },
+                    {
+                        "pic":"classify-rementuijian/b3.png",
+                        "name":"苏宁乐居"
+                    },
+                    {
+                        "pic":"classify-rementuijian/b4.png",
+                        "name":"以旧换新"
+                    },
+                    {
+                        "pic":"classify-rementuijian/b5.png",
+                        "name":"联名信用卡"
+                    }
+
+                ]
+            },
+            {
+                "class":"专场推荐",
+                "main":[
+                    {
+                        "pic":"classify-rementuijian/c1.jpg",
+                        "name":"苏宁电竞"
+                    },
+                    {
+                        "pic":"classify-rementuijian/c2.jpg",
+                        "name":"Super会员"
+                    }
+                    
+
+                ]
+            }
+        ]
     }
     
     

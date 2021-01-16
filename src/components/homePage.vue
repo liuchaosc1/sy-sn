@@ -8,7 +8,7 @@
             </div>
         </keep-alive>
       </div>
-      <div class="bottom-bar" v-show="componentName!='my-mine'">
+      <div class="bottom-bar" v-show="showOrnot()">
         <div class="bottom-btn" @click="btn('my-like')" >
             <img src="../images/guess-you-like.png" alt="" v-if="componentName=='my-like'" class="bottom-img">
             <img src="../images/youlike.png" alt="" v-else class="bottom-img">
@@ -50,10 +50,17 @@ import paihangbang from "./paihangbang"
 import shppingCar from "./shoppingCar"
 import myAccount from "./myAccount"
 export default {
-   data(){
-        return {
-            componentName:"my-like"
-        }
+   
+    computed:{
+      login(){
+        return this.$store.state.login
+      },
+      loginIn(){
+        return this.$store.state.loginIn
+      },
+      componentName(){
+     return this.$store.state.componentName
+   },
     },
     components:{
         "my-like":like,
@@ -64,9 +71,18 @@ export default {
 	},
   methods:{
     btn(componentName){
-      this.componentName=componentName;
+      this.$store.state.componentName=componentName;
     //   console.log(this.componentName)
       
+    },
+    showOrnot(){
+      if(this.componentName!='my-mine'){
+        return true
+      }else if(this.componentName=="my-mine"&&this.$store.state.login){
+        return false
+      }else if(this.$store.state.loginIn){
+        return true
+      }
     }
     
   }

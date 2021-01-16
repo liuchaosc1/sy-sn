@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "11088337",
+      "name": "苏宁易购-01",
+      "font_class": "suningyigou-",
+      "unicode": "e62b",
+      "unicode_decimal": 58923
+    },
+    {
       "icon_id": "18522313",
       "name": "定位_面",
       "font_class": "dingwei_mian",

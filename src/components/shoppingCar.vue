@@ -9,24 +9,119 @@
                     </p>
             </div>
             <div class="content">
-<!-- --------------------------------------------------------------------------------- -->
-                <div class="not-log-in">
+                
+
+                <div class="not-log-in" v-show="login" >
                     <div class="logBox">
                         <span>登录后同步电脑与手机购物车的商品</span>
-                        <div><span>去登录</span></div>
+                        <div @click="btn()"><span>去登录</span></div>
                     </div>
-                    <div>
+                    <div v-if="1 ==2">
                         <div class="log-photo">
                             <img src="../../public/shoppingCar/sn-cart-empty.png" />
                         </div>
                         <p>购物车还是空的，快来挑选好货吧</p>
                         <button>去逛逛</button>
                     </div>
+                    <div class="carList">
+                        <div class="type">
+                           <div>
+                               <div>
+                                   <input type="checkbox" checked >
+                               
+                               </div>
+                               <img src="../../public/shoppingCar/9f2b8f76dc248e980810bed46d286e73.png" alt="">
+                               <span>苏宁自营</span>
+                           </div>
+                           <span>以免运费</span>
+                        </div>
+                        <div class="carMain">
+                            <div>
+                                <div><input type="checkbox" checked ></div>
+                                <div>
+                                    <div>
+                                        <img src="../../public/shoppingCar/a1.jpg" alt="">
 
+                                   
+                                    </div>
+                                     <div class="more">
+                                    <p>医用外科口罩100片灭菌级一次性防护三层熔喷布口罩</p>
+                                    <div class="theprice">
+                                        <p><span>￥</span><span>36.90</span></p>
+                                        <div class="quantity">
+                                            <div>
+                                                <img src="../../public/shoppingCar/jia-black.png" alt="">
+                                                </div>
+                                            <input type="text" value="1">
+                                            <div>
+                                                <img src="../../public/shoppingCar/jian-black.png" alt="">
+                                                </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                
+                            </div>
+
+                        </div>
+
+                        
+                    </div>
+                    <!-- ---------------------------------------------------------------------------- -->
+                        <div class="carList">
+                        <div class="type">
+                           <div>
+                               <div>
+                                   <input type="checkbox" checked >
+                               
+                               </div>
+                               <img src="../../public/shoppingCar/9f2b8f76dc248e980810bed46d286e73.png" alt="">
+                               <span>苏宁自营</span>
+                           </div>
+                           <span>以免运费</span>
+                        </div>
+                        <div class="carMain">
+                            <div>
+                                <div><input type="checkbox" checked ></div>
+                                <div>
+                                    <div>
+                                        <img src="../../public/shoppingCar/a1.jpg" alt="">
+
+                                   
+                                    </div>
+                                     <div class="more">
+                                    <p>医用外科口罩100片灭菌级一次性防护三层熔喷布口罩</p>
+                                    <div class="theprice">
+                                        <p><span>￥</span><span>36.90</span></p>
+                                        <div class="quantity">
+                                            <div>
+                                                <img src="../../public/shoppingCar/jia-black.png" alt="">
+                                                </div>
+                                            <input type="text" value="1">
+                                            <div>
+                                                <img src="../../public/shoppingCar/jian-black.png" alt="">
+                                                </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                
+                            </div>
+
+                        </div>
+
+                        
+                    </div>
+
+
+
+                    <!-- --------------------------------------------------------------------------------- -->
                 </div>
 
-<!-- ----------------------------------------------------------------------------------------- -->
-                <div class="special-offer" v-if="1 == 2">
+        <!-- ----------------------------------------------------------------------------------------- -->
+                <div class="special-offer" v-show="loginIn">
                     <div class="thisTop">
                         <img src="../../public/shoppingCar/empty-coupon-title.png" alt="">
                     </div>
@@ -74,36 +169,96 @@
                         <img src="../../public/shoppingCar/cnxh-title.png" alt="">
                     </div>
                     <div class="product-list-main">
-                        <div class="product">
-                            <div class="pic"><img src="../../public/shoppingCar/Mqg_Jk43Hj5KoMNEkXq5Fg.jpg" alt=""></div>
+                        <div class="product" v-for="(item,index) in likeList" :key="index">
+                            <div class="pic"><img :src="item.pic" alt=""></div>
                             <div class="text"><p>界面一次性医用口罩三层含医用熔喷布防飞沫防护口罩50只/袋</p></div>
                             <div class="state">
-                                <div><img src="../../public/shoppingCar/sn-ziying.png" alt=""></div>
-                                <div><img src="../../public/shoppingCar/miaosha.png" alt=""></div>
+                                <div><img :src="item.type" alt=""></div>
+                                <!-- <div><img src="../../public/shoppingCar/miaosha.png" alt=""></div> -->
 
                             </div>
                             <div class="price">
-                                <p><span>￥</span><span>9</span><span>.09</span></p>
+                                <p><span>￥</span><span>{{Math.floor(item.price-0)}}</span><span>.{{Math.round(((item.price-Math.floor(item.price-0)))*100)}}</span></p>
 								<div><img src="../../public/shoppingCar/cart.png" alt=""></div>
                             </div>
                         </div>
-                        <div class="product"></div>
-                        <div class="product"></div>
-                        <div class="product"></div>
-                        <div class="product"></div>
-                        
+                       
 
                     </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="thisTop">
+                        <img src="../../public/shoppingCar/reach-bottom.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="calculate">
+            <div>
+                <input type="checkbox">
+                <span>全部</span>
+            </div>
+            <div>
+                <span>合计</span>
+                <div class="heji">
+                    <p><span>￥</span><span>75</span></p>
+                    <div><span>免运费</span></div>
+                </div>
+                <div class="jiesuan">
+                    <span>去结算</span>
+                    <span>(4)</span>
                 </div>
             </div>
         </div>
     </div>
 </template>
 
+<script>
+export default {
+    created(){
+        let url = "http://localhost:8080/json/cainixihuan.json";
+        let xhr = new XMLHttpRequest();
+        xhr.open('GET',url);
+        xhr.send();
+        let that = this;
+        xhr.onload = function(){
+            that.likeList = JSON.parse(xhr.response);
+            // console.log(that.likeList)
+            // that.theTitle = that.productList[0].title;
+            // console.log(that.theTitle)
+            
+        }
+        console.log(this.$store);
+    },
+     data(){
+        return {
+            likeList:[],
+           
+        }
+    },
+    computed: {
+    login() {
+      return this.$store.state.login;
+      
+    },
+    loginIn(){
+        return this.$store.state.loginIn
+    }
+  },
+   methods:{
+    btn(){
+      this.$store.state.componentName='my-mine';
+      console.log(this.componentName)
+    }
+    },
+}
+</script>
+
 
 <style scoped>
     .shoppingCar{
         height: 100%;
+        position: relative;
     }
     .main{
         display: flex;
@@ -340,7 +495,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 20px;
+        /* margin-top: 20px; */
     }
     .pic{
         width: 80%;
@@ -416,6 +571,7 @@
         justify-content: space-between;
         background-color: #ffe37e;
         align-items: center;
+        margin-bottom: 15px;
          /* padding-left: 10px;
         padding-right: 10px; */
      }
@@ -469,5 +625,235 @@
         /* height: 200%; */
 		line-height: 200%;
 		border-radius: 5px;
+    }
+    .bottom>.thisTop{
+        margin-bottom: 30px;
+    }
+    .carList{
+          display: flex; 
+       flex-direction: column;
+       /* justify-content: flex-end; */
+       align-items: center;
+       /* padding-right: 10px; */
+       /* height: 50px; */
+       width: 100%;
+       background-color: white;
+       margin-bottom: 10px;
+    }
+    .type{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .type>div>div{
+        /* margin-bottom: 3px; */
+        margin-right: 1%;
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background-color: #175094; */
+        /* overflow: hidden; */
+    }
+    input{
+        border: none;
+        outline: none;
+        width: 20px;
+        height: 20px;
+    }
+    .type>div>img{
+        width: 25px;
+    }
+     .type>div{
+         display: flex;
+         align-items: center;
+         margin-left: 5px;
+         justify-content: flex-start;
+         /* width: 20%; */
+         flex-grow: 1;
+     }
+    .type>div>span{
+        font-size: .48rem;
+        line-height: 40px;
+        
+    }
+    .type>span{
+        font-size: .48rem;
+        margin-right: 10px;
+        color: red;
+    }
+    .carMain{
+          width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-between; */
+        align-items: center;
+    }
+    .carMain>div{
+        width: 100%;
+        margin-left: 10px;
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+    .carMain>div>div:nth-child(2)>div:nth-child(1){
+        width: 20%;
+        /* position: relative; */
+
+        
+    }
+    .carMain>div>div:nth-child(2){
+        width: 100%;
+        margin-left: 10px;
+        position: relative;
+    }
+    .carMain>div>div:nth-child(2)>div>img{
+        width: 100%;
+
+    }
+    .carMain>div>div:nth-child(3){
+       flex-grow: 1;
+       background-color: green;
+       height: 100%;
+       display: flex;
+       flex-direction: column;
+      
+       margin-left: 15px;
+       margin-right: 20px;
+    }
+    .more{
+        position: absolute;
+        height: 95%;
+        /* background-color: hotpink; */
+        width: 73%;
+        left: 23%;
+        top: 0;
+        /* z-index: 23; */
+        margin-right: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+         font-size: .52rem;
+    }
+    .theprice>p{
+        color: red;
+    }
+    .theprice{
+        display: flex;
+        justify-content: space-between;
+    }
+    .theprice>div{
+        /* height: 25px; */
+        width: 34%;
+        /* background-color: yellow; */
+    }
+    .quantity{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 50px;
+        border: 1px solid #a9a9a9a6;
+       
+        padding: 1%;
+    }
+    .quantity>div>img{
+        width: 100%;
+    }
+
+    .quantity>div{
+        width: 20%;
+        /* background-color: brown; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .quantity>input{
+        width: 40%;
+        height: 100%;
+        text-align:center
+    }
+    .calculate{
+        position: fixed;
+        width: 100%;
+        height: 8%;
+        background: white;
+        bottom: 50px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #f1ecec6e;
+         border-top: 1px solid #f1ecec6e;
+        /* padding-left: 10px;
+        padding-right: 10px; */
+
+    }
+    .calculate>div:first-child{
+        margin-left: 10px;
+        display: flex;
+        align-items: center;
+    }
+    .calculate>div:last-child{
+        margin-right: 10px;
+    }
+    .heji{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        height: 100%;
+        
+    }
+    .calculate>div:nth-child(2){
+        display: flex;
+        align-items: center;
+    }
+    .calculate>div:first-child>span{
+        font-size: .48rem;
+        margin-left: 5px;
+    }
+    .calculate>div:nth-child(2)>span{
+        font-size: .44rem;
+        margin-bottom: 15%;
+        margin-right: 6px;
+    }
+    .heji>p>span:first-child{
+        font-size: .4rem;
+    }
+    
+     .heji>div{
+        height: 15px;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid gold;
+        border-radius: 5px;
+    }
+    .heji>p{
+        color: red;
+    }
+    .heji>p>span:nth-child(2){
+        font-size: .6rem;
+    }
+    .heji>div>span{
+        font-size: .35rem
+        
+    }
+    .jiesuan>span{
+        font-size: .6px;
+    }
+    
+    .jiesuan{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 20px;
+        background-color: gold;
+        height: 50%;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 10px;
     }
 </style>
