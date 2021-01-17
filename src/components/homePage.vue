@@ -4,7 +4,7 @@
       <div class="comp-content">
         <keep-alive>
             <div class="main">
-                <component :is="componentName"></component>
+                <component :is="componentName" v-on:my-del="del" ref = "child"></component>
             </div>
         </keep-alive>
       </div>
@@ -39,7 +39,18 @@
         </div>
       </div>
    
-   
+   <div class="delete " v-show="flag">
+      <div class="delbox">
+        <div class="dle">
+          <h5>提示</h5>
+          <p>是否确认删除</p>
+          <div>
+            <div @click="quxiao"><span>取 消</span></div>
+            <div @click="quedin"><span>删 除</span></div>
+          </div>
+        </div>
+      </div>
+		</div>
   </div>
 </template>
 
@@ -68,7 +79,14 @@ export default {
         "paihangbang":paihangbang,
         "shopping-car":shppingCar,
         "my-mine":myAccount
-	},
+  },
+  data(){
+    return {
+      flag:0
+    }
+  },
+    
+  
   methods:{
     btn(componentName){
       this.$store.state.componentName=componentName;
@@ -83,8 +101,19 @@ export default {
       }else if(this.$store.state.loginIn){
         return true
       }
+    },
+    del(){
+      this.flag = 1;
+    },
+    quedin(){
+
+      this.$refs.child.del();
+      this.quxiao();
+    },
+    quxiao(){
+      this.flag = 0;
+
     }
-    
   }
 }
 </script>
@@ -150,5 +179,65 @@ export default {
     
 
 }
+.delete{
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		background-color:rgba(0, 0, 0, 0.4);
+		z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	}
+  .delbox{
+    width: 80%;
+    height: 0;
+    padding-bottom: 42%;
+    background-color: white;
+    position: relative;
+    border-radius: 8px;
+
+  }
+  .dle{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* background-color: tomato; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+  }
+  .dle>div{
+    height: 23%;
+    width: 83%;
+    /* background-color: green; */
+    display: flex;
+    justify-content: space-between;
+  }
+  .dle>p{
+    font-size: .58rem;
+    color: #666;
+  }
+  .dle>div>div{
+    width: 46%;
+    height: 92%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .62rem;
+     border-radius: 4px;
+  }
+  .dle>div>div:nth-child(1){
+    border: #c1c1c1 1px solid;
+  }
+  .dle>div>div:nth-child(2){
+    background-color: #fc0;
+  }
+  /* .dele{
+    display: none;
+  } */
 </style>
 
