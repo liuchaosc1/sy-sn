@@ -302,6 +302,9 @@ export default {
 };
 </script>
 <style scoped>
+.login-in{
+  width:100%;overflow: hidden;
+}
 .logo>.img2{
     transform: rotateY(180deg);
 }
