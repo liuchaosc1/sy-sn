@@ -13,12 +13,12 @@
 				</div>
 			</div>
 			<div class="content">
-				<div class="not-log-in">
+				<div class="not-log-in" >
 					<div class="logBox" v-show="login">
 						<span>登录后同步电脑与手机购物车的商品</span>
 						<div @click="btn()"><span>去登录</span></div>
 					</div>
-					<div v-if="this.$store.state.shopcarlist.length == 0">
+					<div v-if="this.$store.state.shopcarlist.length == 0" v-show="login">
 						<div class="log-photo">
 							<img src="../../public/shoppingCar/sn-cart-empty.png" />
 						</div>
@@ -255,6 +255,7 @@
 					this.fenlei()
 				}
 				// 
+				this.jiancha()
 				that.jisuan()
 
 			},
@@ -345,20 +346,7 @@
 					this.$store.state.shopcarlist[index].com_flag = 1
 				}
 				let that = this;
-				// this.gross = 0;
-				// for (let i = 0; i < this.a.length; i++) {
-				// 	let a = 0
-				// 	for (let j = 0; j < that.a[i].length - 1; j++) {
-				// 		a = a + that.a[i][j].com_flag
-				// 	}
-				// 	if (a == that.a[i].length - 1) {
-				// 		that.a[i][that.a[i].length - 1] = 1
-				// 	} else {
-				// 		that.a[i][that.a[i].length - 1] = 0
-				// 	}
-				// 	// that.gross  += a
-
-				// }
+			
 				this.jiancha()
 				this.jisuan()
 				this.shop_checked(item)
@@ -434,10 +422,7 @@
 					}
 					
 				}
-				// for (let j = 0; j < that.a.length; j++) {
-				// 	console.log(that.a[j]);
-
-				// }
+				
 				this.fenlei()
 				this.jiancha()
 				this.jisuan()
@@ -977,8 +962,9 @@
 		/* background-color: #175094; */
 		/* overflow: hidden; */
 	}
-
+	
 	input {
+		 /* -webkit-appearance：none; */
 		border: none;
 		outline: none;
 		width: 15px;
