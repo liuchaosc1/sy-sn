@@ -3,49 +3,61 @@
         "pic":"shoppingCar/a1.jpg",
         "title":"医用外科口罩100片灭菌级一次性防护三层熔喷布口罩",
         "type":"shoppingCar/sn-ziying.png",
-        "price":"36.90"
+        "price":"36.90",
+        "merchant":"苏宁自营"
     },
     {
         "pic":"shoppingCar/a2.png",
         "title":"鲜菓篮 丑橘不知火中大果5斤装 正宗四川丑橘 橘子柑橘 拍2件合发带箱9.5斤（净重8.5-9.5斤） 新鲜水果",
         "type":"shoppingCar/miaosha.png",
-        "price":"20.80"
+        "price":"20.80",
+        "merchant":"湾仔码头"
     },
     {
         "pic":"shoppingCar/a3.jpg",
-        "title":"【追剧好伴侣】良品铺子 芝麻猪肉脯100gx1袋装 靖江蜜汁猪肉干零食休闲食品",
+        "title":"芝麻猪肉脯100gx1袋装 靖江蜜汁猪肉干零食休闲食品",
         "type":"shoppingCar/qiang.png",
-        "price":"28.90"
+        "price":"28.90",
+        "merchant":"苏宁自营"
     },
     {
         "pic":"shoppingCar/a4.jpg",
         "title":"云南白药(YUNNAN BAIYAO)牙膏180g留兰香型单支装",
         "type":"shoppingCar/miaosha.png",
-        "price":"28.31"
+        "price":"28.31",
+        "merchant":"湾仔码头"
     },
     {
         "pic":"shoppingCar/a5.jpg",
         "title":"良品铺子 坚果类 奶香夏威夷果 120gX1袋 干果休闲食品其他零食炒货送开口器",
         "type":"shoppingCar/sn-ziying.png",
-        "price":"28.90"
+        "price":"28.90",
+        "merchant":"良品铺子"
+
     },
     {
         "pic":"shoppingCar/a6.jpg",
         "title":"良品铺子 原味山楂片 250gx1袋装 山楂干山楂零食小吃果脯蜜饯休闲食品袋装",
         "type":"shoppingCar/miaosha.png",
-        "price":"19.90"
+        "price":"19.90",
+        "merchant":"良品铺子"
+
     }
     ,
     {
         "pic":"shoppingCar/a7.jpg",
         "title":"【追剧好伴侣】良品铺子-芝麻夹心海苔脆片35gx1袋 海苔儿童零食即食海苔类零食",
         "type":"shoppingCar/miaosha.png",
-        "price":"17.90"
+        "price":"17.90",
+        "merchant":"良品铺子"
+
     },
     {
         "pic":"shoppingCar/a8.jpg",
-        "title":"【下酒小配菜】良品铺子 鸡肉类 奥尔良小鸡腿 108gX1袋装 肉类熟食卤味办公室鸡肉类零食小吃食品其他小包装",
+        "title":"【下酒小配菜】 鸡肉类 奥尔良小鸡腿 108gX1袋装 肉类熟食卤味办公室鸡肉类零食小吃食品其他小包装",
         "type":"shoppingCar/miaosha.png",
-        "price":"30.90"
+        "price":"30.90",
+        "merchant":"苏宁自营"
+
     }
 ]
