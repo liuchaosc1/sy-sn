@@ -647,6 +647,14 @@ export default {
 
 </script>
 <style>
+.sn-nav-wrapper{
+  width:100%;
+  overflow:hidden;
+}
+.index-wrap{
+  width: 100%;
+  overflow: hidden;
+}
 /* 去登录 */
 .ToLogin{
   height: 1.8rem;
@@ -723,21 +731,21 @@ export default {
     overflow: hidden;
 }
 .pro-img{
-      width: 6.84rem;
+      width: 100%;
     height: 6.84rem;
     border-radius: .24rem .24rem 0 0;
     
 }
 .pro-image-wrapper{
       position: relative;
-    width: 6.84rem;
+    width: 100%;
     height: 6.84rem;
 }
 .kw-wrapper{
 
     position: relative;
     box-sizing: border-box;
-    width: 6.84rem;
+    width: 95%;
     overflow: hidden;
     border-radius: .24rem;
     margin-bottom: .36rem;
