@@ -159,6 +159,7 @@ export default {
         let height = 0;
         for (let i = 1;i <= index; i++) {
           height = height + this.$refs.init[i-1].scrollHeight
+          // console.log(this.$refs.init);
           
         }
        

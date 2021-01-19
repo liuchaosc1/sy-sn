@@ -23,7 +23,7 @@
 							<img src="../../public/shoppingCar/sn-cart-empty.png" />
 						</div>
 						<p>购物车还是空的，快来挑选好货吧</p>
-						<button>去逛逛</button>
+						<button @click="quguangg()">去逛逛</button>
 					</div>
 					<div class="carList" v-for="(item, index) in a" :key="index">
 						<div class="type">
@@ -119,7 +119,7 @@
 
 					<div class="other">
 						<p>购物车还是空的，快来挑选好货吧</p>
-						<button>去逛逛</button>
+						<button @click="quguangg()">去逛逛</button>
 					</div>
 				</div>
 
@@ -220,7 +220,7 @@
 				a: [],
 				all_flag: 1,
 				bianji: false,
-				 show:0
+				show:0
 				
 			};
 		},
@@ -236,6 +236,9 @@
 			btn() {
 				this.$store.state.componentName = "my-mine";
 				console.log(this.componentName);
+			},
+			quguangg(){
+				this.$store.state.componentName = "my-like";
 			},
 			//接收调用者传来的id
 			add(item) {
@@ -312,14 +315,6 @@
 				}
 				// console.log(this.a)
 			},
-			// total() {
-			// 	let that = this;
-			// 	let thePrice = 0;
-			// 	for (let i = 0; i < that.$store.state.shopcarlist.length; i++) {
-			// 		thePrice = thePrice + that.$store.state.shopcarlist[i].count;
-			// 	}
-			// 	// this.gross = thePrice;
-			// },
 			shuru(item) {
 				let that = this
 				let index = this.panduan(item);
@@ -439,8 +434,6 @@
 					} else {
 						that.a[i][that.a[i].length - 1] = 0
 					}
-					// that.gross  += a
-					// this.shop_checked(item)
 				}
 			},
 			del1() {
