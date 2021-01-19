@@ -17,7 +17,21 @@
                 <span>&#xe612;</span>
             </div>
             <div class="proimg-lunbo" v-if="proInfo">
-                
+               <swiper :options="swiperOption" ref="mySwiper">
+                   <swiper-slide>
+                       <img src="//imgservice.suning.cn/uimg1/b2c/image/2MB-VLLSxFjpdMUXV3tSDA.jpg_800w_800h_4e_100Q_is" alt="">
+                   </swiper-slide>
+                   <swiper-slide>
+                       <img src="//imgservice.suning.cn/uimg1/b2c/image/8FZclwidYEqoQs7kvmKmtA.jpg_800w_800h_4e_100Q_is" alt="">
+                   </swiper-slide>
+                   <swiper-slide>
+                       <img src="//imgservice.suning.cn/uimg1/b2c/image/iAN66HoUY75adhMJ3bwQyg.jpg_800w_800h_4e_100Q_is" alt="">
+                   </swiper-slide>
+                   <swiper-slide>
+                       <img src="//imgservice.suning.cn/uimg1/b2c/image/gFKsAZybg7twomMYuwJ--A.jpg_800w_800h_4e_100Q_is" alt="">
+                   </swiper-slide>
+
+                </swiper> 
             </div>
         </div>
 
@@ -485,9 +499,15 @@
     </div>
 </template>
 <script>
-// import axios from "axios";
+import { Swiper, SwiperSlide } from "vue-awesome-swiper";
+import "swiper/swiper-bundle.css";
+import Swiper2, { Navigation,Autoplay, Pagination} from 'swiper';
+Swiper2.use([Navigation,Autoplay,Pagination]);
 export default {
-   
+   components: {
+    Swiper,
+    SwiperSlide,
+  },
     data() {
         return {
             list: [], //看了又看
@@ -496,9 +516,6 @@ export default {
                 
             ],
             mask: false,
-            
-
-            
             recomLunbo: "recom",
             recom: "recom",
             guess: "guess",
@@ -509,6 +526,19 @@ export default {
             topshow: false,
             topMenuName: "product",
             proInfo: {},
+             swiperOption: {
+        loop: true,
+        observer:true,
+        observeParents:true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        autoplay: {
+            disableOnInteraction: false,
+            delay:3000
+        }
+      },
         };
     },
     beforeRouteLeave(to, from, next) {
@@ -616,6 +646,14 @@ a {
 }
 .top-menu .activeTop {
     position: relative;
+}
+.proimg-lunbo{
+    width:100%;
+    height: 100%;
+}
+.proimg-lunbo img{
+    width:100%;
+    height: 100%;
 }
 .top-menu .activeTop::after {
     content: "";
@@ -1427,7 +1465,7 @@ a {
     font-weight: bold;
 }
 .storerecom-guess {
-    height: 75%;
+    height: 48%;
     padding: 3%;
     background-color: #fff;
 }
