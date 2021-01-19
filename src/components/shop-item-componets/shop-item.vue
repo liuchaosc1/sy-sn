@@ -1,4 +1,5 @@
 <template>
+
     <div class="prodetail iconfont" ref="scrollDiv">
         <div class="top-menu" v-show="topshow">
             <div @click="goBack">&#xe6ec;</div>
@@ -18,7 +19,7 @@
             </div>
             <div class="proimg-lunbo" v-if="proInfo">
                <swiper :options="swiperOption" ref="mySwiper">
-                   <swiper-slide>
+                   <swiper-slide class="">
                        <img src="//imgservice.suning.cn/uimg1/b2c/image/2MB-VLLSxFjpdMUXV3tSDA.jpg_800w_800h_4e_100Q_is" alt="">
                    </swiper-slide>
                    <swiper-slide>
@@ -873,6 +874,7 @@ a {
     font-size: 12px;
     font-weight: 400;
     color: #999;
+    margin-left: -10px;
 }
 .special-offer > div > span {
     font-size: 15px;

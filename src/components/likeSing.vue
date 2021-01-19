@@ -699,7 +699,7 @@ export default {
   
 
 </script>
-<style>
+<style scoped>
 .sn-nav-wrapper{
   width:100%;
   overflow:hidden;
