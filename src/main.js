@@ -13,8 +13,11 @@ import "./iconfont2/iconfont/iconfont.css";
 
 Vue.use(ElementUI);
 Vue.config.productionTip = false
-
-
+// swiper插件
+// import { Swiper, SwiperSlide } from "vue-awesome-swiper";
+// import "swiper/swiper-bundle.css";
+// import Swiper2, { Navigation,Autoplay, Pagination} from 'swiper';
+// Swiper2.use([Navigation,Autoplay,Pagination]);
 
 new Vue({
   router:router,

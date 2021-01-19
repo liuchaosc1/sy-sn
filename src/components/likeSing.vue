@@ -85,7 +85,26 @@
           src="https://image1.suning.cn/uimg/cms/img/160942141893352387.png"
           alt=""
         />
-        <div class="swiper-wrapper"></div>
+        <div class="swiper-wrapper">
+          <swiper :options="swiperOption" ref="mySwiper">
+            <swiper-slide class="my-swiper">
+                <img src="//image2.suning.cn/uimg/cms/img/161093566454621578.jpg?format=_is_1242w_610h" alt="">
+            </swiper-slide>
+            <swiper-slide class="my-swiper">
+                <img src="https://image2.suning.cn/uimg/cms/img/161063014071946534.jpg?format=_is_1242w_610h" alt="">
+            </swiper-slide >
+            <swiper-slide class="my-swiper">
+                <img src="https://oss.suning.com/adpp/creative_kit/material/picture/20210108-0fe9725eab1c4f1c9fb54fd03f08791eaa22d7565d9b4354.jpg?format=_is_1242w_610h" alt="">
+            </swiper-slide>
+            <swiper-slide class="my-swiper">
+                <img src="//oss.suning.com/aps/aps_learning/iwogh/2021/01/18/11/iwoghBannerPicture/80b1071e6ea44b93a62b26ae59304506.png?format=_is_1242w_610h" alt="">
+            </swiper-slide>
+            <swiper-slide class="my-swiper">
+                <img src="//oss.suning.com/aps/aps_learning/iwogh/2021/01/18/11/iwoghBannerPicture/dd651b301e354ebdb181031cf594d69f.png?format=_is_1242w_610h" alt="">
+            </swiper-slide>
+            <div class="swiper-pagination" slot="pagination"></div>
+          </swiper>
+        </div>
       </div>
       <!-- 中间图片广告 -->
       <div class="v7-zdy">
@@ -564,8 +583,15 @@
   </div>
 </template>
 <script>
+import { Swiper, SwiperSlide } from "vue-awesome-swiper";
+import "swiper/swiper-bundle.css";
+import Swiper2, { Navigation,Autoplay, Pagination} from 'swiper';
+Swiper2.use([Navigation,Autoplay,Pagination]);
 export default {
-
+  components: {
+    Swiper,
+    SwiperSlide,
+  },
   data(){
     return{
       login:this.$store.state.login,
@@ -575,6 +601,19 @@ export default {
       second:60,
       num1:0,
       num2:0,
+       swiperOption: {
+        loop: true,
+        observer:true,
+        observeParents:true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        autoplay: {
+            disableOnInteraction: false,
+            delay:3000
+        }
+      },
       list:[
         {
           images:"//imgservice.suning.cn/uimg1/b2c/image/3W6ZyCccJLMOqeHpMcJXqQ.jpg?format=_is_300w_300h_4e.webp",
@@ -600,7 +639,21 @@ export default {
           price:"￥1.25",
           comments:"1.7万+评价"
         }
-      ]
+      ],
+       swiperOptions: {
+                pagination: {
+                    el: ".swiper-pagination",
+                },
+                loop: true,
+                autoplay: true, //自动轮播
+            },
+
+            swiperOptionsVer: {
+                loop: true,
+                autoplay: true, //自动轮播
+                // direction: 'vertical',
+                direction: "vertical",
+            },
     }
    
   },
@@ -1172,16 +1225,27 @@ a{
   height: 4.58rem;
 }
 .swiper-wrapper {
-  position: absolute;
-  width: 90%;
-  height: 4.58rem;
+ 
+  width: 95%;
+  height: 5.2rem;
   top: 0;
-  left: 5%;
+  left: 2.5%;
+}
+.my-swiper{
+  width: 100%;
+  height: 100%
+ 
+}
+
+.my-swiper img{
+  width: 95%;
+  height: 100%;   
+  border-radius: 5%;
 }
 .v7-zdy {
   width: 100%;
   height: 5.615rem;
-  margin-top: 5px;
+  margin-top: 20px;
 }
 .v7-zdy img {
   width: 33.33%;
