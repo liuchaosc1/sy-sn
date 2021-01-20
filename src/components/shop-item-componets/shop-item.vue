@@ -363,9 +363,9 @@
                 </p>
             </div>
         </div>
-        <div class="picture-detail" v-if="detailSpecifis==detail" v-html="proInfo.descript">
-            <div v-for="(item,index) in proList" :key="index">
-                <img :src="item.img" alt />
+        <div class="picture-detail " v-if="detailSpecifis==detail" >
+            <div v-for="(item,index) in this.$route.query.detailPage" :key="index">
+                <img :src="item" alt />
             </div>
         </div>
         <div class="specifi-detail" v-if="detailSpecifis==specifi">
@@ -488,10 +488,11 @@
                 <div class="cover-body">
                         <div class="btmfloat">
                             <div class="slider">
-                                <div class="select-content" v-for="(item,index) in lists" :key="index">
-                                    <h2>{{item.title}}</h2>
-                                    <div class="select-item" @click="changeBackground" ref="change">{{item.pro[index]}}</div>
-                                    
+                                <div class="select-content" v-for="(item,index) in this.$route.query.select" :key="index">
+                                    <h2>{{item.name}}</h2>
+                                   <!-- --------------------------------------------- -->
+                                   <!-- ---------------------------------------------------- -->
+                                    <my-sclass :msg = "item.mian"></my-sclass>
                                 </div>
                                 <div class="limit-num">
                                     <h2 class="flexhd">购买数量</h2>
@@ -519,16 +520,14 @@
 import { Swiper, SwiperSlide } from "vue-awesome-swiper";
 import "swiper/swiper-bundle.css";
 import Swiper2, { Navigation,Autoplay, Pagination} from 'swiper';
+import sclass from "./shop-item-componets/my-class.vue"
 Swiper2.use([Navigation,Autoplay,Pagination]);
 export default {
    
    components: {
     Swiper,
     SwiperSlide,
-  },
-  created(){
-      console.log(this.$route.query)
-
+    "my-sclass":sclass,
   },
     data() {
         return {
@@ -563,6 +562,7 @@ export default {
             topMenuName: "product",
             proInfo: {},
             disapper:"none",
+            
              swiperOption: {
         loop: true,
         observer:true,
@@ -574,7 +574,9 @@ export default {
         autoplay: {
             disableOnInteraction: false,
             delay:3000
-        }
+        },
+        
+
       },
         };
     },
@@ -660,14 +662,15 @@ export default {
              this.$router.go(-1);
            this.$store.state.componentName="shopping-car"
         },
-        changeBackground(){
-            this.$refs.change.style="background:#ffeda2;border: .02rem solid #fc0"
-        }
+       
     },
 };
 </script>
 <style scoped>
 /* 加入购物车底部 */
+.sign{
+    background-color: yellow!important;
+}
 .btn-right{
     border-radius: .06rem .24rem .24rem .06rem;
     background: linear-gradient(90deg,#f60,#f60);
@@ -756,16 +759,7 @@ export default {
     align-items: center;
 }
 /* 加入购物车弹框 */
-.select-item{
-    display: inline-block;
-    background: #f6f6f6;
-    margin: .24rem .24rem 0 0;
-    padding: .2rem 1em;
-    text-align: center;
-    border-radius: .24rem;
-    box-sizing: border-box;
-    border: .04rem solid #f6f6f6;
-}
+
 .select-content{
  border-bottom: .04rem solid #f6f6f6;
  padding-bottom: 5px;
@@ -776,6 +770,7 @@ export default {
 }
 .slider{
     padding: 0 .48rem;
+
 }
 .cover-body{
     width: 100%;
@@ -824,7 +819,7 @@ export default {
 }
 .toShopCar {
     background:#fff;
-    height: 70%;
+    height: 82%;
     z-index: 5555;
     position: fixed;
     bottom: .12rem;
