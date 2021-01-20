@@ -1,4 +1,5 @@
 <template>
+
     <div class="prodetail iconfont" ref="scrollDiv">
         <div class="top-menu" v-show="topshow">
             <div @click="goBack">&#xe6ec;</div>
@@ -875,6 +876,7 @@ a {
     font-size: 12px;
     font-weight: 400;
     color: #999;
+    margin-left: -10px;
 }
 .special-offer > div > span {
     font-size: 15px;

@@ -698,7 +698,7 @@ export default {
 }
   
 
-</script scoped>
+</script>
 <style scoped>
 .sn-nav-wrapper{
   width:100%;
