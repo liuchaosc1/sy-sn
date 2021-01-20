@@ -112,7 +112,7 @@ export default {
       this.flag = 1;
     },
     quedin(){
-
+      // console.log(this.$refs.child);
       this.$refs.child.del();
       this.quxiao();
     },
