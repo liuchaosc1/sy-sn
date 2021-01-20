@@ -420,7 +420,7 @@
             </p>
         </div>
 
-        <div class="look">
+        <!-- <div class="look">
             <span>看了又看</span>
         </div>
         <div class="like-content">
@@ -441,7 +441,7 @@
                     <span class="evaluateNum">{{item.evaluateNum}}</span>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <!-- 底部导航栏 -->
         <div class="prodetail-bottom">
@@ -1442,7 +1442,7 @@ a {
 }
 .eva-main > .user-name > div {
     height: 100%;
-    width: 18%;
+    /* width: 18%; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1459,7 +1459,7 @@ a {
     height: 50%;
 }
 .user-eva {
-    height: 60%;
+    height: 50%;
     padding: 24px 8px;
 }
 .user-phone {
