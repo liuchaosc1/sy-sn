@@ -37,14 +37,14 @@
         </div>
 
         <!-- 价格 -->
-        <div class="pro-price" v-if="proInfo.price">
+        <div class="pro-price" >
             <span class="money">¥</span>
-            <span class="yuan">{{proInfo.priceInt}}</span>
+            <span class="yuan">12</span>
             <span>.</span>
-            <span class="mao">{{proInfo.priceDec}}</span>
+            <span class="mao">3</span>
         </div>
         <div class="pro-title">
-            <p>{{proInfo.title}}</p>
+            <p>中裕(ZHONGYU)原味小麦粉5kg面粉富强粉中筋面粉</p>
 
             <!-- 关注图标 -->
             <div>
@@ -52,7 +52,7 @@
             </div>
         </div>
         <div class="pro-introduce">
-            <p>{{proInfo.subtitle}}</p>
+            <p>精选用料 安全放心</p>
         </div>
         <div class="co-branded">
             <img src="../../assets/prodetail/coBranded.png" alt />
@@ -457,46 +457,59 @@
                 <div class="buy">
                     <span class="buy1">立即购买</span>
                 </div>
-                <div @click="addCart(proInfo)" class="buy2">
+                <div  class="buy2">
                     <el-button :plain="true" @click="open2" class="add-cart">加入购物车</el-button>
                 </div>
             </div>
         </div>
 
-        <!-- 区域 -->
-        <div class="mask" v-if="mask">
-            <transition>
-                <div class="area">
-                    <div class="nav">
-                        <span>地址选择</span>
-                        <span @click="close" class="nav-icon">&#xe615;</span>
+       <!--加入购物车 -->
+            <div class="toShopCar" :style="'display:'+disapper">
+                <header>
+                    <div class="cover-header">
+                        <div class="img-box">
+                            <img src="//imgservice.suning.cn/uimg1/b2c/image/3W6ZyCccJLMOqeHpMcJXqQ.jpg" alt="">
+                        </div>
+                        <div class="product">
+                            <div class="price">
+                                <div class="price-type">
+                                    <p class="choose-price">￥10.01</p>
+                                </div>
+                                <p class="bianma">商品编码:11083216388</p>
+                                <div class="display-product-name">斜月三星家纺 2条装全棉流星雨毛巾 舒适柔软 成人洗脸巾30*60cm 2条装流星雨毛巾 30*60cm</div>
+                            </div>
+                        </div>
                     </div>
-                    <div area-option>
-                        <select v-model="selectProvince" @change="provinceChange" class="sele">
-                            <option
-                                v-for="(item,index) in provinceList"
-                                :value="item"
-                                :key="index"
-                            >{{item.name}}</option>
-                        </select>
-                        <select v-model="selectCity" @change="cityChange" class="sele">
-                            <option
-                                v-for="(item,index) in cityList"
-                                :value="item"
-                                :key="index"
-                            >{{item.name}}</option>
-                        </select>
-                        <select v-model="selectArea" class="sele">
-                            <option
-                                v-for="(item,index) in areaList"
-                                :value="item"
-                                :key="index"
-                            >{{item}}</option>
-                        </select>
-                    </div>
+                </header>
+                <div class="cover-close" @click="disapper='none'"></div>
+                <div class="cover-body">
+                        <div class="btmfloat">
+                            <div class="slider">
+                                <div class="select-content" v-for="(item,index) in lists" :key="index">
+                                    <h2>{{item.title}}</h2>
+                                    <div class="select-item" @click="changeBackground" ref="change">{{item.pro[index]}}</div>
+                                    
+                                </div>
+                                <div class="limit-num">
+                                    <h2 class="flexhd">购买数量</h2>
+                                    <div class="items">
+                                        <span>-</span>
+                                        <input type="number" value="1">
+                                        <span>+</span>
+                                    </div>
+                                </div>  
+                            </div>
+                            <div class="cluster-footer">
+                                <div class="cartbuy">
+                                    <div class="cart-buy">
+                                        <button class="btn-left">马上抢</button>
+                                        <button class="btn-right">加入购物车</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                 </div>
-            </transition>
-        </div>
+            </div>
     </div>
 </template>
 <script>
@@ -505,17 +518,32 @@ import "swiper/swiper-bundle.css";
 import Swiper2, { Navigation,Autoplay, Pagination} from 'swiper';
 Swiper2.use([Navigation,Autoplay,Pagination]);
 export default {
+   
    components: {
     Swiper,
     SwiperSlide,
   },
     data() {
         return {
+            lists:[
+                {
+                    title:"颜色",
+                    pro:[
+                       "一条装",
+                       "一条装"
+                    ]
+                },
+                {
+                    title:"尺寸",
+                    pro:[
+                       "30*60cm",
+                       "30*60cm"
+                    ]
+                }
+            ],
             list: [], //看了又看
             proLists: [],
-            proList: [
-                
-            ],
+            proList: [],
             mask: false,
             recomLunbo: "recom",
             recom: "recom",
@@ -527,6 +555,7 @@ export default {
             topshow: false,
             topMenuName: "product",
             proInfo: {},
+            disapper:"none",
              swiperOption: {
         loop: true,
         observer:true,
@@ -591,14 +620,10 @@ export default {
                 behavior: "smooth",
             });
         },
-        // addCart(proList) {
-        //     this.$store.commit("addCart", proList);
-        // },
+        
         open2() {
-            this.$message({
-                message: "成功加入购物车",
-                type: "success",
-            });
+           this.disapper="block"
+
         },
 
         // 详情跳转
@@ -624,15 +649,182 @@ export default {
             this.areaList = this.selectCity.areaList;
             this.selectArea = this.areaList[0];
         },
-        // gouClick() {
-        //     this.$router.push({
-        //         path: "./shopcart",
-        //     });
-        // },
+        gouClick() {
+             this.$router.go(-1);
+           this.$store.state.componentName="shopping-car"
+        },
+        changeBackground(){
+            this.$refs.change.style="background:#ffeda2;border: .02rem solid #fc0"
+        }
     },
 };
 </script>
 <style scoped>
+/* 加入购物车底部 */
+.btn-right{
+    border-radius: .06rem .24rem .24rem .06rem;
+    background: linear-gradient(90deg,#f60,#f60);
+    flex-grow: 1;
+    height: 1.32rem;
+}
+.btn-left{
+    margin-right: .12rem;
+    border-radius: .24rem .06rem .06rem .24rem;
+    background: linear-gradient(90deg,#fc0,#fc0);
+    flex-grow: 1;
+     height: 1.32rem;
+}
+.cart-buy{
+    padding: 0 .48rem;
+    background: #fff;
+    display: flex;
+    align-items: center;
+}
+.cartbuy{
+    width: 100%;
+}
+.cluster-footer{
+    width: 100%;
+    padding-bottom: .4rem;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 111;
+}
+/* 关闭键 */
+.cover-close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: url(../../images/cover-close.png) no-repeat 50%;
+    background-size: .6rem .6rem;
+}
+
+/* 购买数量 */
+.limit-num>.items input{
+    height: .96rem;
+    line-height: .96rem;
+    min-width: .7rem;
+    max-width: 1.1rem;
+    box-sizing: border-box;
+    padding: 0 .04rem;
+    border: 0;
+    border-radius: 0;
+    background-color: transparent;
+    font-size: .48rem;
+    color: inherit;
+    vertical-align: top;
+    text-align: center;
+    appearance: none;
+    margin: .1rem .3rem 0;
+
+}
+.limit-num>.items span{
+    display: inline-block;
+    width: .8rem;
+    height: .8rem;
+    line-height: .8rem;
+    background-color: #f4f4f4;
+    border-radius: 50%;
+    margin-top: .16rem;
+}
+.limit-num>.items{
+    width: 4rem;
+    height: 1.12rem;
+    border: 1px solid #ddd;
+    border-radius: .56rem;
+    font-size: .48rem;
+    text-align: center;
+}
+.flexhd{
+    flex: 1;
+    color: #222;
+    font-size: .52rem;
+}
+.limit-num{
+    display: flex;
+    align-items: center;
+}
+/* 加入购物车弹框 */
+.select-item{
+    display: inline-block;
+    background: #f6f6f6;
+    margin: .24rem .24rem 0 0;
+    padding: .2rem 1em;
+    text-align: center;
+    border-radius: .24rem;
+    box-sizing: border-box;
+    border: .04rem solid #f6f6f6;
+}
+.select-content{
+ border-bottom: .04rem solid #f6f6f6;
+ padding-bottom: 5px;
+}
+.select-content>h2{
+    font-size:0.52rem;
+    color: #222;
+}
+.slider{
+    padding: 0 .48rem;
+}
+.cover-body{
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y:auto ;
+}
+.display-product-name{
+    font-size: .52rem;
+    color: #222;
+    margin-top: .36rem;
+
+}
+.bianma{
+    font-size:0.4rem;
+    color: rgb(153, 153, 153)
+}
+.price-type{
+    display: flex;
+    align-items: baseline;
+    height: .64rem;
+    margin: 1rem 0 .32rem;
+}
+.price{
+    text-align: left;
+    margin-left: .4rem;
+    font-size: .56rem;
+    margin-top: .3rem;
+}
+.product{
+    padding-right: 10px;
+    margin-left: 4.8rem;
+}
+ .img-box>img{
+    width: 4.56rem;
+    height: 4.56rem;
+}
+.img-box{
+    position: absolute;
+    top: -.74rem;
+    left: .48rem;
+    width: 4.2rem;
+    height: 4.2rem;
+    overflow: hidden;
+    border: 1px solid #eee;
+    border-radius: .48rem;
+}
+.toShopCar {
+    background:#fff;
+    height: 70%;
+    z-index: 5555;
+    position: fixed;
+    bottom: .12rem;
+    left: .12rem;
+    right: .12rem;
+    border-radius: .48rem;
+}
 html,
 body,
 .prodetail {
@@ -1467,7 +1659,7 @@ a {
     font-weight: bold;
 }
 .storerecom-guess {
-    height: 48%;
+    height: 55%;
     padding: 3%;
     background-color: #fff;
 }

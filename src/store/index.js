@@ -7,6 +7,7 @@ export default new Vuex.Store({
 	state: {
 		login: true,
 		loginIn: false,
+		num1:0,
 		componentName: "my-like",
 		shopcarlist: [
 

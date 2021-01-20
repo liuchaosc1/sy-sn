@@ -1,12 +1,12 @@
 <template>
   <!-- 猜你喜欢页面 -->
-  <div ref="scro" @scrollY="fun1">
+  <div  id="all" >
     <!-- 轮播图上方内容 -->
     <div class="sn-nav-wrapper" >
          <!-- 遮罩层 -->
-        <div class="hidden-container" :style="'opacity:'+num2">
+        <div class="hidden-container" :style="'opacity:'+num1">
             <div class="hidden-wrapper">
-            <a href="">
+            <a href="" @click.prevent="toClassf">
               <img
                 src="https://image1.suning.cn/uimg/cms/img/157199320847433454.png"
                 alt=""
@@ -17,11 +17,12 @@
                 <input type="text" placeholder="年货礼盒200减210">
               </a>
             </div>
-            <a href="">
-              <img
+            <a @click.prevent="toLogin">
+              <img v-if="login"
                 src="https://image2.suning.cn/uimg/cms/img/157199321817918653.png"
                 alt=""
               />
+              <img v-else src="https://image1.suning.cn/uimg/cms/img/157199322108277118.png" alt="">
             </a>
           </div>
         </div>
@@ -36,7 +37,7 @@
        
           <!-- 最上方广告 -->
           <div class="content-wrap-one">
-            <a href="">
+            <a href="" @click.prevent="toClassf">
               <img
                 src="https://image1.suning.cn/uimg/cms/img/157199320847433454.png"
                 alt=""
@@ -50,11 +51,12 @@
                 />
               </a>
             </div>
-            <a href="">
-              <img
+            <a @click.prevent="toLogin" >
+              <img v-if="login"  
                 src="https://image2.suning.cn/uimg/cms/img/157199321817918653.png"
                 alt=""
               />
+              <img v-else src="https://image1.suning.cn/uimg/cms/img/157199322108277118.png" alt="">
             </a>
           </div>
           <!-- 搜索框 -->
@@ -546,7 +548,7 @@
               <div class="pro-list-wrapper">
                   <div class="pro-list">
                       <div class="left-list">
-                            <div class="kw-wrapper" v-for="(item,index) in list" :key="index" @click="toshopItem">
+                            <div class="kw-wrapper" v-for="(item,index) in list" :key="index" @click="toshopItem(item)">
                                 <div class="pro-image-wrapper">
                                     <img class="pro-img" :src="item.images" alt="">
                                 </div>
@@ -580,6 +582,9 @@
     <div class="ToLogin" v-show="login" @click="toLogin">
       <img src="https://image3.suning.cn/uimg/cms/img/157588645542963955.png" alt="">
     </div>
+      <a href="#all">
+        <div id="top" :style="'opacity:'+num1"></div>
+      </a> 
   </div>
 </template>
 <script>
@@ -599,8 +604,7 @@ export default {
       hour:5,
       minute:20,
       second:60,
-      num1:0,
-      num2:0,
+     
        swiperOption: {
         loop: true,
         observer:true,
@@ -616,24 +620,28 @@ export default {
       },
       list:[
         {
+          id:1,
           images:"//imgservice.suning.cn/uimg1/b2c/image/3W6ZyCccJLMOqeHpMcJXqQ.jpg?format=_is_300w_300h_4e.webp",
           tag:"斜月三星家纺 2条装全棉流星雨毛巾 舒适柔软 成人洗脸巾30*60cm 2条装流星雨毛巾 30*60cm",
           price:"￥10.01",
           comments:"1.5万+评价"
         },
         {
+          id:2,
           images:"//imgservice.suning.cn/uimg1/b2c/image/T6vpfeqQrWr-K0SHoVL-2w.jpg?format=_is_300w_300h_4e.webp",
           tag:"想念原味小麦粉5kg 馒头粉 面条粉 饺子包子中筋粉 家庭装通用小麦粉",
           price:"￥27.9",
           comments:"6.4万+评价"
         },
         {
+          id:3,
           images:"//imgservice.suning.cn/uimg1/b2c/image/1i9MVtDyzNHLz2cO2qk_Qw.jpg?format=_is_300w_300h_4e.webp",
           tag:"猫山王榴莲饼爆浆流心榴莲酥充饥夜宵休闲糕点零食网红特产 榴莲味12枚",
           price:"￥9.8",
           comments:"1.8万+评价"
         },
         {
+          id:4,
           images:"//imgservice.suning.cn/uimg1/b2c/image/f_siNdA-dA7eoMeCYhOGow.png?format=_is_300w_300h_4e.webp",
           tag:"【满20件免运费】1枚装单枚50-60g溢流香 国产 熟咸蛋 咸鸭蛋红泥腌制熟红心咸鸭蛋流油",
           price:"￥1.25",
@@ -657,7 +665,11 @@ export default {
     }
    
   },
-   
+  computed:{
+      num1(){
+        return this.$store.state.num1
+      }
+   },
   mounted(){
     setInterval(() => {
       if(this.num>-11){
@@ -679,20 +691,17 @@ export default {
   },
   
     methods: {
-    toshopItem() {
+    toshopItem(item) {
       this.$router.push({
-        path:"/shopitem"
+        path:("/shopitem?id="+item.id)
       });
     },
-    fun1(){
-      this.num1=$ref.scro.scrollY;
-        if(this.num1>100){
-          this.num2=1
-        }
-        console.log(this.num1);
-    },
+   
     toLogin(){
       this.$store.state.componentName="my-mine"
+    },
+    toClassf(){
+      this.$store.state.componentName="my-class"
     }
   }
 }
@@ -700,6 +709,17 @@ export default {
 
 </script>
 <style scoped>
+/* 跳转 */
+#top{
+  position:fixed;
+  width: 2rem;
+  height: 2rem;
+  bottom: 3.7rem;
+  right: .3rem;
+  border-radius: 50%;
+  background-image: url("https://res.suning.cn/project/cmsWeb/suning/wap/v7/images/top.png");
+  background-size: 2rem 2rem;
+}
 .sn-nav-wrapper{
   width:100%;
   overflow:hidden;
@@ -1229,7 +1249,7 @@ a{
   width: 95%;
   height: 5.2rem;
   top: 0;
-  left: 2.5%;
+  left: 4.5%;
 }
 .my-swiper{
   width: 100%;

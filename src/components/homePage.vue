@@ -1,7 +1,7 @@
 <template>
   <div class="homePage">
     
-      <div class="comp-content">
+      <div class="comp-content" ref="scrollDiv">
         <keep-alive>
             <div class="main">
                 <component :is="componentName" v-on:my-del="del" ref = "child"></component>
@@ -21,6 +21,7 @@
             <span class="bottom-title">分类</span>
         </div>
          <div class="bottom-btn" @click="btn('paihangbang')" >
+           
             <img src="../images/panghangbang-b.png" alt="" v-if="componentName=='paihangbang'" class="bottom-img">
             <img src="../images/paihangbang.png" alt="" v-else class="bottom-img">
             <span class="bottom-title">必抢清单</span>
@@ -61,7 +62,9 @@ import paihangbang from "./paihangbang"
 import shppingCar from "./shoppingCar"
 import myAccount from "./myAccount"
 export default {
-   
+   mounted(){
+     this.$refs.scrollDiv.addEventListener("scroll",this.scrollEvent,true)
+   },
     computed:{
       login(){
         return this.$store.state.login
@@ -72,6 +75,9 @@ export default {
       componentName(){
      return this.$store.state.componentName
    },
+    num1(){
+      return this.$store.state.num1;
+    }
     },
     components:{
         "my-like":like,
@@ -113,6 +119,13 @@ export default {
     quxiao(){
       this.flag = 0;
 
+    },
+    scrollEvent(){
+      if(this.$refs.scrollDiv.scrollTop>450){
+        this.$store.state.num1=1
+      }else if(this.$refs.scrollDiv.scrollTop<450){
+        this.$store.state.num1=0
+      }
     }
   }
 }

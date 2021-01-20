@@ -291,11 +291,13 @@ export default {
       this.open = true;
     },
     successLogin(phoneNum, password) {
-      if (this.phoneNum == 18052440256 && this.password == "123456") {
+      if (this.phoneNum == 987654321 && this.password == "123456") {
         this.$store.state.login = false;
         this.$store.state.loginIn=true
-      } else {
-        alert("账号或者密码不正确");
+      } else if(this.phoneNum ==""||this.password ==""){
+        alert("账号或密码不能为空");
+      }else{
+        alert("账号或密码不正确")
       }
     },
   },
