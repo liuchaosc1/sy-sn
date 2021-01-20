@@ -153,7 +153,6 @@
 					</div>
 				</div>
 			</div>
-			</div>
 			<div class="bottom">
 				<div class="thisTop">
 					<img src="../../public/shoppingCar/reach-bottom.png" alt="" />
@@ -483,7 +482,7 @@
 					select:item.select,
 					title:item.title,
 					type:item.type,
-				}})
+					}})
 				console.log(this.$router);
 				console.log(item);
 			}

@@ -471,15 +471,15 @@
                 <header>
                     <div class="cover-header">
                         <div class="img-box">
-                            <img src="//imgservice.suning.cn/uimg1/b2c/image/3W6ZyCccJLMOqeHpMcJXqQ.jpg" alt="">
+                            <img :src="this.$route.query.pic" alt="">
                         </div>
                         <div class="product">
                             <div class="price">
                                 <div class="price-type">
-                                    <p class="choose-price">￥10.01</p>
+                                    <p class="choose-price">￥{{this.$route.query.price}}</p>
                                 </div>
                                 <p class="bianma">商品编码:11083216388</p>
-                                <div class="display-product-name">斜月三星家纺 2条装全棉流星雨毛巾 舒适柔软 成人洗脸巾30*60cm 2条装流星雨毛巾 30*60cm</div>
+                                <div class="display-product-name">{{this.$route.query.title}}</div>
                             </div>
                         </div>
                     </div>
