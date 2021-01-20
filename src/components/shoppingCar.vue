@@ -129,7 +129,7 @@
 					</div>
 					<div class="product-list-main">
 						<div class="product" v-for="(item, index) in likeList" :key="index">
-							<div class="pic"><img :src="item.pic" alt="" /></div>
+							<div class="pic"><img :src="item.pic" alt="" @click="goRegister(item)" /></div>
 							<div class="text">
 								<p>{{item.title}}</p>
 							</div>
@@ -469,10 +469,23 @@
 				}
 				this.gross = a;
 				this.totalPrice = b.toFixed(2)
-				// console.log(a);
-				// console.log(b.toFixed(2));
+			},
+			goRegister(item){
+				this.$router.push({path:'/shopitem',query:{
+					described:item.described,
+					detailPage:item.detailPage,
+					evaluate:item.evaluate,
+					headPhoto:item.headPhoto,
+					merchant:item.merchant,
+					pic:item.pic,
+					price:item.price,
+					select:item.select,
+					title:item.title,
+					type:item.type,
+					}})
+				console.log(this.$router);
+				console.log(item);
 			}
-
 		},
 
 	};

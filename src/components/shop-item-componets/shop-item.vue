@@ -18,10 +18,11 @@
             </div>
             <div class="proimg-lunbo" v-if="proInfo">
                <swiper :options="swiperOption" ref="mySwiper">
-                   <swiper-slide>
-                       <img src="//imgservice.suning.cn/uimg1/b2c/image/2MB-VLLSxFjpdMUXV3tSDA.jpg_800w_800h_4e_100Q_is" alt="">
+                   <swiper-slide v-for="(item,index) in this.$route.query.headPhoto" :key="index">
+                       <img :src="item" alt="">
+                       
                    </swiper-slide>
-                   <swiper-slide>
+                   <!-- <swiper-slide>
                        <img src="//imgservice.suning.cn/uimg1/b2c/image/8FZclwidYEqoQs7kvmKmtA.jpg_800w_800h_4e_100Q_is" alt="">
                    </swiper-slide>
                    <swiper-slide>
@@ -29,21 +30,21 @@
                    </swiper-slide>
                    <swiper-slide>
                        <img src="//imgservice.suning.cn/uimg1/b2c/image/gFKsAZybg7twomMYuwJ--A.jpg_800w_800h_4e_100Q_is" alt="">
-                   </swiper-slide>
+                   </swiper-slide> -->
 
                 </swiper> 
             </div>
         </div>
 
         <!-- 价格 -->
-        <div class="pro-price" v-if="proInfo.price">
+        <div class="pro-price" >
             <span class="money">¥</span>
-            <span class="yuan">{{proInfo.priceInt}}</span>
+            <span class="yuan">{{Math.floor(this.$route.query.price)}}</span>
             <span>.</span>
-            <span class="mao">{{proInfo.priceDec}}</span>
+            <span class="mao">{{Math.floor((this.$route.query.price-Math.floor(this.$route.query.price))*100)}}</span>
         </div>
         <div class="pro-title">
-            <p>{{proInfo.title}}</p>
+            <p>{{this.$route.query.title}}</p>
 
             <!-- 关注图标 -->
             <div>
@@ -51,7 +52,7 @@
             </div>
         </div>
         <div class="pro-introduce">
-            <p>{{proInfo.subtitle}}</p>
+            <p>{{this.$route.query.described}}</p>
         </div>
         <div class="co-branded">
             <img src="../../assets/prodetail/coBranded.png" alt />
@@ -140,7 +141,7 @@
         </div>
 
         <div class="eva-title" ref="evaScroll">
-            <p>评价(300+)</p>
+            <p>评价({{this.$route.query.evaluate.length}})</p>
             <p>
                 99%好评率
                 <span>&#xe631;</span>
@@ -150,7 +151,7 @@
             <div class="user-name">
                 <div>
                     <img src="../../assets/prodetail/userImg.jpg" alt />
-                    <p class="user-phone">1***5</p>
+                    <p class="user-phone">{{this.$route.query.evaluate[0].username}}</p>
                 </div>
 
                 <div class="eva-star">
@@ -162,10 +163,12 @@
                 </div>
             </div>
             <div class="user-eva">
-                <p>真不错</p>
-                <img src="//image3.suning.cn/uimg/ZR/share_order/160801883639271649.jpg?format=400w_400h_1e_1c" alt />
+                <p>{{this.$route.query.evaluate[0].say}}</p>
+                <img v-for="(item,index) in this.$route.query.evaluate[0].photo" :src="item" alt  :key="index"/>
+
+                <!-- <img src="//image3.suning.cn/uimg/ZR/share_order/160801883639271649.jpg?format=400w_400h_1e_1c" alt />
                  <img src="//image3.suning.cn/uimg/ZR/share_order/160801883639271649.jpg?format=400w_400h_1e_1c" alt />
-                  <img src="//image3.suning.cn/uimg/ZR/share_order/160801883639271649.jpg?format=400w_400h_1e_1c" alt />
+                  <img src="//image3.suning.cn/uimg/ZR/share_order/160801883639271649.jpg?format=400w_400h_1e_1c" alt /> -->
             </div>
         </div>
         <div class="eva-bottom">
@@ -508,9 +511,13 @@ export default {
     Swiper,
     SwiperSlide,
   },
+  created(){
+      console.log(this.$route.query)
+
+  },
     data() {
         return {
-            list: [], //看了又看
+            list:[], //看了又看
             proLists: [],
             proList: [
                 
@@ -623,11 +630,6 @@ export default {
             this.areaList = this.selectCity.areaList;
             this.selectArea = this.areaList[0];
         },
-        // gouClick() {
-        //     this.$router.push({
-        //         path: "./shopcart",
-        //     });
-        // },
     },
 };
 </script>

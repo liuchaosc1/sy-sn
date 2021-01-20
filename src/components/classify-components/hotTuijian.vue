@@ -71,8 +71,6 @@ export default {
       // console.log(that.productList.content)
      
     };
-    
-
   },
   computed:{
     
