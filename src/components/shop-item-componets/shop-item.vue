@@ -476,7 +476,8 @@
                         <div class="product">
                             <div class="price">
                                 <div class="price-type">
-                                    <p class="choose-price">￥{{this.$route.query.price}}</p>
+                                    <p v-if="price != false" class="choose-price">￥{{price}}</p>
+                                    <p v-else class="choose-price">￥{{this.$route.query.price}}</p>
                                 </div>
                                 <p class="bianma">商品编码:11083216388</p>
                                 <div class="display-product-name">{{this.$route.query.title}}</div>
@@ -492,14 +493,14 @@
                                     <h2>{{item.name}}</h2>
                                    <!-- --------------------------------------------- -->
                                    <!-- ---------------------------------------------------- -->
-                                    <my-sclass :msg = "item.mian"></my-sclass>
+                                    <my-sclass :msg = "item.mian" v-on:my-price="xuanzhon"></my-sclass>
                                 </div>
                                 <div class="limit-num">
                                     <h2 class="flexhd">购买数量</h2>
                                     <div class="items">
-                                        <span>-</span>
+                                        <span @click="less">-</span>
                                         <input type="number" :value="num3">
-                                        <span>+</span>
+                                        <span @click="more">+</span>
                                     </div>
                                 </div>  
                             </div>
@@ -562,7 +563,7 @@ export default {
             topMenuName: "product",
             proInfo: {},
             disapper:"none",
-            
+            price:0,
              swiperOption: {
         loop: true,
         observer:true,
@@ -592,6 +593,14 @@ export default {
     },
   
     methods: {
+        less(){
+            if(this.num3>1){
+                this.num3-=1;
+            }
+        },
+        more(){
+            this.num3+=1
+        },        
         recomGuess(name) {
             this.recomLunbo = name;
         },
@@ -662,7 +671,9 @@ export default {
              this.$router.go(-1);
            this.$store.state.componentName="shopping-car"
         },
-        
+       xuanzhon(price){
+           this.price = price;
+       },
     },
 };
 </script>
