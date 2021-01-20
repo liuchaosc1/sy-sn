@@ -483,8 +483,6 @@
 					title:item.title,
 					type:item.type,
 					}})
-				console.log(this.$router);
-				console.log(item);
 			}
 		},
 

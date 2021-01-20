@@ -112,16 +112,10 @@ export default {
       let c = 0;
       let sum =0;
       for(let i = 1; i < this.$refs.moves.children[0].children.length;i++){
-        
-       
         sum = sum + this.$refs.moves.children[0].children[i].scrollHeight
-
         if (newVal >= sum) {
            c = i
-         
         }
-        
-        
       }
       this.index1 = c;
       
