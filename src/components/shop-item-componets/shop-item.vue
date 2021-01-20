@@ -662,7 +662,7 @@ export default {
              this.$router.go(-1);
            this.$store.state.componentName="shopping-car"
         },
-       
+        
     },
 };
 </script>

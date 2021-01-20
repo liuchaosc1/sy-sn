@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="select-item " v-for="(item,index) in list" :key="index" :class="{sign:index == index00}" @click="changeBackground(index)">
+        <div class="select-item " v-for="(item,index) in list" :key="index" :class="{sign:index == index00}" @click="changeBackground(item,index)">
 		    {{item.name}}
 	    </div>
     </div>
@@ -13,11 +13,13 @@ export default {
         return{
             list:this.msg,
             index00:0,
+            
         }
     },
     methods:{
-         changeBackground(index){
+         changeBackground(item,index){
             this.index00=index;
+            this.$emit("my-price",item.price)
         }
     }
     
