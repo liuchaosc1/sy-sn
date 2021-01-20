@@ -664,7 +664,9 @@ export default {
            this.$store.state.componentName="shopping-car"
         },
        xuanzhon(price){
-           this.price = price;
+           if (price != null) {
+               this.price = price;
+           }
        },
     },
 };
