@@ -498,7 +498,7 @@
                                     <h2 class="flexhd">购买数量</h2>
                                     <div class="items">
                                         <span>-</span>
-                                        <input type="number" value="1">
+                                        <input type="number" :value="num3">
                                         <span>+</span>
                                     </div>
                                 </div>  
@@ -547,7 +547,7 @@ export default {
                     ]
                 }
             ],
-            list: [], //看了又看
+           num3:1,
             proLists: [],
             proList: [],
             mask: false,

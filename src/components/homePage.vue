@@ -22,8 +22,8 @@
         </div>
          <div class="bottom-btn" @click="btn('paihangbang')" >
            
-            <img src="../images/panghangbang-b.png" alt="" v-if="componentName=='paihangbang'" class="bottom-img">
-            <img src="../images/paihangbang.png" alt="" v-else class="bottom-img">
+            <!-- <img src="../images/panghangbang-b.png" alt="" v-if="componentName=='paihangbang'" class="bottom-img"> -->
+            <img src="../images/paihangbang.png" alt=""  class="bottom-img">
             <span class="bottom-title">必抢清单</span>
         </div>
          <div class="bottom-btn" @click="btn('shopping-car')" >

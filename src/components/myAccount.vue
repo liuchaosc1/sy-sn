@@ -717,7 +717,7 @@ a {
 
 /* 好货推荐 */
 .like-content {
-  width: 95%;
+  width: 94%;
   padding: 0 12px;
   display: flex;
   flex-direction: row;
@@ -727,7 +727,7 @@ a {
 }
 .like-item {
   width: 49%;
-  padding: 0px 5px;
+  
   background-color: white;
   margin-top: 8px;
   padding: 0 0 5px 0;
