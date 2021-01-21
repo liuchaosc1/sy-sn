@@ -687,9 +687,12 @@ export default {
            }
         //    console.log(obj.Price);
        },
-       appraise(){
+       appraise(item){
+        //    console.log(this.$route.query.evaluate);
             this.$router.push({
-                path: "/appraise"
+                path: "/appraise",
+                query:{comment:this.$route.query.evaluate}
+                
             })
        },
        panduan(item) {

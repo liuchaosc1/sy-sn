@@ -66,7 +66,7 @@ import myAccount from "./myAccount"
 export default {
    mounted(){
      this.$refs.scrollDiv.addEventListener("scroll",this.scrollEvent,true)
-     console.log(this.$refs.child);
+    //  console.log(this.$refs.child);
      this.gross = this.$refs.child._data.gross;
 
    },
