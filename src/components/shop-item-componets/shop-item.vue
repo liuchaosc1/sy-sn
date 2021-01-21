@@ -173,7 +173,7 @@
             </div>
         </div>
         <div class="eva-bottom">
-            <p>查看全部评价</p>
+            <p @click="appraise">查看全部评价</p>
         </div>
         <div class="question">
             <p>问问已购用户</p>
@@ -676,6 +676,11 @@ export default {
                this.price = price;
            }
        },
+       appraise(){
+            this.$router.push({
+                path: "/appraise"
+            })
+       }
     },
 };
 </script>

@@ -22,7 +22,7 @@
                     </div>
                     <!-- password -->
                     <div class="password">
-                        <input type="password"  v-model="password" placeholder="请输入密码" class="phone-number" />
+                        <input :type="passortext()"  v-model="password" placeholder="请输入密码" class="phone-number" />
 
                         <div class="password-icon">
                             <img src="../images/eyeclose.png" v-if="open" @click="change"  alt />
@@ -237,7 +237,7 @@
 export default {
   data() {
     return {
-      open: "true",
+      open: true,
 
       phoneNum: "",
       password: "",
@@ -300,6 +300,13 @@ export default {
         alert("账号或密码不正确")
       }
     },
+    passortext(){
+      if(this.open==true){
+        return "password"
+      }else if(this.open==false){
+        return "text"
+      }
+    }
   },
 };
 </script>

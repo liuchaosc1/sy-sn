@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import shopitem from "../components/shop-item-componets/shop-item.vue"
 import homePage from"../components/homePage.vue"
+import appraise from "../components/appraise.vue"
 Vue.use(VueRouter)
 
 const routes = [
@@ -13,6 +14,10 @@ const routes = [
     path:'/',
     component:homePage
 
+  },
+  {
+    path: '/appraise',
+    component:appraise
   }
   
 ]
