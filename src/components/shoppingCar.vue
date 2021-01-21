@@ -520,7 +520,7 @@
 
 			},
 			goRegister(item){
-				console.log(item);
+				// console.log(item);
 				this.$router.push({path:'/shopitem',query:{
 					described:item.described,
 					detailPage:item.detailPage,
@@ -559,7 +559,7 @@
 		},
 		goto(item){
 			let index = this.puanduan2(item.title);
-			console.log(this.likeList[index]);
+			// console.log(this.likeList[index]);
 			this.goRegister(this.likeList[index])
 		}
 		},

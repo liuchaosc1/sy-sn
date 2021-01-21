@@ -493,7 +493,7 @@
                                 <div class="select-content" v-for="(item,index) in this.$route.query.select" :key="index">
                                     <h2>{{item.name}}</h2>
                                    <!-- --------------------------------------------- -->
-                                   {{num3}}
+                                   <!-- {{num3}} -->
                                    <!-- ---------------------------------------------------- -->
                                     <my-sclass :msg = "item.mian" v-on:my-price="xuanzhon"></my-sclass>
                                 </div>
@@ -649,7 +649,8 @@ export default {
         
         open2() {
            this.disapper="block"
-            // console.log(this.theList);
+            console.log(this.theList);
+            console.log(this.$route.query.selectPrice);
         },
 
         // 详情跳转

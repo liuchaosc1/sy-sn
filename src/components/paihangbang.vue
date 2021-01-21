@@ -1,3 +1,4 @@
 <template>
-    <div>排行榜</div>
+    <div></div>
+	
 </template>
