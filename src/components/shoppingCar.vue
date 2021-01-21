@@ -45,9 +45,10 @@
 									</div>
 									<div class="more">
 										<p>{{ item1.title }}</p>
+										<p class="poo" @click="www(item1)">{{item1.selectName}}</p>
 										<div class="theprice">
 											<p>
-												<span>￥</span><span>{{ item1.price }}</span>
+												<span>￥</span><span>{{item1.selectPrice}}</span>
 											</p>
 											<div class="quantity">
 												<div @click="add(item1)">
@@ -128,24 +129,24 @@
 						<img src="../../public/shoppingCar/cnxh-title.png" alt="" />
 					</div>
 					<div class="product-list-main">
-						<div class="product" v-for="(item, index) in likeList" :key="index">
-							<div class="pic"><img :src="item.pic" alt="" @click="goRegister(item)" /></div>
+						<div class="product" v-for="(item1, index) in likeList" :key="index">
+							<div class="pic"><img :src="item1.pic" alt="" @click="goRegister(item1)" /></div>
 							<div class="text">
-								<p>{{item.title}}</p>
+								<p>{{item1.title}}</p>
 							</div>
 							<div class="state">
-								<div><img :src="item.type" alt="" /></div>
+								<div><img :src="item1.type" alt="" /></div>
 								<!-- <div><img src="../../public/shoppingCar/miaosha.png" alt=""></div> -->
 							</div>
 							<div class="price">
 								<p>
-									<span>￥</span><span>{{ Math.floor(item.price - 0) }}</span><span>.{{
+									<span>￥</span><span>{{ Math.floor(item1.price - 0) }}</span><span>.{{
                       Math.round(
-                        (item.price - Math.floor(item.price - 0)) * 100
+                        (item1.price - Math.floor(item1.price - 0)) * 100
                       )
                     }}</span>
 								</p>
-								<div @click="add(item)">
+								<div @click="add(item1)">
 									<img src="../../public/shoppingCar/cart.png" alt="" />
 								</div>
 							</div>
@@ -207,6 +208,7 @@
 			};
 			// this.total()
 			that.jisuan()
+			this.$emit("my-add",this.gross)
 
 		},
 		mounted() {
@@ -220,8 +222,9 @@
 				a: [],
 				all_flag: 1,
 				bianji: false,
-				show:0
-				
+				show:0,
+				shuoming:'',
+				num3:1
 			};
 		},
 		computed: {
@@ -241,35 +244,72 @@
 				this.$store.state.componentName = "my-like";
 			},
 			//接收调用者传来的id
-			add(item) {
+			add(item1) {
 				let that = this
-				let index = this.panduan(item);
-				if (index > -1) {
+				// console.log(typeof(item1.selectName) == 'string');
+				if (typeof(item1.selectName) != 'string') {
+				let index = that.panduan(item1.select[0].mian[0].name);
+					// console.log('111');
+				// console.log(index);
+					if (index > -1) {
 					//就让这个元素的（个数）count值++
 					this.$store.state.shopcarlist[index].count++;
+
 				} else {
 
 					that.$store.commit({
 						type: "add",
-						amount: item,
-
+						amount: item1,
+						selectName:item1.select[0].mian[0].name,
+						selectPrice:item1.select[0].mian[0].price,
+						count:(this.num3-0)
 					});
-					// console.log(this.$store.state.shopcarlist)
+					
 					this.fenlei()
+					this.www(item1)
 				}
+
+				} else if (typeof(item1.selectName) == 'string') {
+					let index = that.panduan(item1.selectName);
+					// console.log('221');
+					// console.log(index);
+				if (index > -1) {
+					//就让这个元素的（个数）count值++
+					this.$store.state.shopcarlist[index].count++;
+					// console.log(this.$store.state.shopcarlist[index]);
+					
+
+				} else {
+
+					that.$store.commit({
+						type: "add",
+						amount: item1,
+						selectName:item1.select[0].mian[0].name,
+						selectPrice:item1.select[0].mian[0].price,
+						count:(this.num3-0)
+					});
+					
+					this.fenlei()
+					this.www(item1)
+				}
+				}
+				
+
 				// 
 				this.jiancha()
 				that.jisuan()
-
+				this.$emit("my-add",this.gross)
 			},
 			sub(item) {
 				// console.log(item);
 				let that = this
-				let index = this.panduan(item);
+				let index = this.panduan(item.selectName);
+				// console.log(item);
 				if (this.$store.state.shopcarlist[index].count > 1) {
 					this.$store.state.shopcarlist[index].count--;
 					// this.total();
 					that.jisuan()
+					this.$emit("my-add",this.gross)
 				}
 				
 			},
@@ -277,11 +317,13 @@
 			panduan(item) {
 				//遍历shopList中的所有对象++
 				let that = this
+					
+
 				for (let i = 0; i < this.$store.state.shopcarlist.length; i++) {
-					//判断如果shoplist中有某个对象的id和调用者传过来的id相同
-					if (that.$store.state.shopcarlist[i].title == item.title) {
+					if (that.$store.state.shopcarlist[i].selectName == item ){
 						//返回这个对象的索引
 						return i;
+						// console.log(i);
 					}
 				}
 				//如果没有则返回-1
@@ -317,7 +359,9 @@
 			},
 			shuru(item) {
 				let that = this
-				let index = this.panduan(item);
+				let index = this.panduan(item.selectName);
+				// console.log(this.$store.state.shopcarlist);
+				// console.log(item);
 				let c = this.$store.state.shopcarlist[index].count;
 				c = parseInt(c)
 				if (c < 1) {
@@ -335,7 +379,8 @@
 				that.jisuan()
 			},
 			com_checked(item) {
-				let index = this.panduan(item);
+				// console.log(item.selectName);
+				let index = this.panduan(item.selectName);
 				this.$store.state.shopcarlist[index].com_flag--;
 				if (this.$store.state.shopcarlist[index].com_flag < 0) {
 					this.$store.state.shopcarlist[index].com_flag = 1
@@ -421,6 +466,7 @@
 				this.fenlei()
 				this.jiancha()
 				this.jisuan()
+				this.$emit("my-add",this.gross)
 			},
 			jiancha() {
 				let that = this
@@ -465,7 +511,7 @@
 				for (let i = 0; i < this.$store.state.shopcarlist.length; i++) {
 					a = a + that.$store.state.shopcarlist[i].count*that.$store.state.shopcarlist[i].com_flag
 					// console.log(that.$store.state.shopcarlist.count);
-					b = b + that.$store.state.shopcarlist[i].count*that.$store.state.shopcarlist[i].price*that.$store.state.shopcarlist[i].com_flag
+					b = b + that.$store.state.shopcarlist[i].count*that.$store.state.shopcarlist[i].selectPrice*that.$store.state.shopcarlist[i].com_flag
 				}
 				this.gross = a;
 				this.totalPrice = b.toFixed(2)
@@ -482,15 +528,37 @@
 					select:item.select,
 					title:item.title,
 					type:item.type,
-					}})
-			}
-		},
+					selectName:item.select[0].mian[0].name,
+					selectPrice:item.select[0].mian[0].price
 
+					}})
+			},
+			www(item1){
+			// console.log(item1.select[0].mian[0].name);
+			this.shuoming = item1.select[0].mian[0].name
+			// console.log(this.$store.state.shopcarlist);
+			// console.log(this.shuoming);
+		}
+		},
+		
 	};
 </script>
 
 
 <style scoped>
+.poo{
+	word-break: normal;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	font-size: 0.05rem;
+	color: #666;
+	text-overflow: ellipsis;
+	height: 13px;
+	line-height: 11px;
+	width: 60%;
+	overflow-x: hidden;
+}
 	.shoppingCar {
 		height: 100%;
 		position: relative;
@@ -1013,7 +1081,7 @@
 		display: flex;
 		align-items: center;
 		margin-top: 10px;
-		margin-bottom: 15px;
+		margin-bottom: 19px;
 	}
 
 	.carMain>div>div:nth-child(2)>div:nth-child(1) {
