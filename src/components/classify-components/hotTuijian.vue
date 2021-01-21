@@ -179,7 +179,6 @@ export default {
 }
 .movediv{
   position: relative;
-  /* top: 0; */
 }
 .banner {
   width: 100%;
@@ -281,7 +280,7 @@ display: flex;
   height: 100%;
   display: flex;
   justify-content: flex-start;
-  
+  transition: all .1s linear;
   /* margin-left: 14px;
    margin-right: 21px; */
    width: 89%;

@@ -4,7 +4,7 @@
       <div class="comp-content" ref="scrollDiv">
         <keep-alive>
             <div class="main">
-                <component :is="componentName" v-on:my-del="del" ref = "child"></component>
+                <component :is="componentName" v-on:my-del="del" ref = "child" v-on:my-add ="gross1"></component>
             </div>
         </keep-alive>
       </div>
@@ -26,7 +26,9 @@
             <img src="../images/paihangbang.png" alt=""  class="bottom-img">
             <span class="bottom-title">必抢清单</span>
         </div>
-         <div class="bottom-btn" @click="btn('shopping-car')" >
+         <div class="bottom-btn shop" @click="btn('shopping-car')" >
+           <div v-if="gross > 0">{{gross}}</div>
+
             <img src="../images/shopping-car-b.png" alt="" v-if="componentName=='shopping-car'" class="bottom-img">
             <img src="../images/shopping-car.png" alt="" v-else class="bottom-img">
             <span class="bottom-title">购物车</span>
@@ -64,6 +66,13 @@ import myAccount from "./myAccount"
 export default {
    mounted(){
      this.$refs.scrollDiv.addEventListener("scroll",this.scrollEvent,true)
+     console.log(this.$refs.child);
+     this.gross = this.$refs.child._data.gross;
+
+   },
+   created(){
+    //  this.jisuan();
+    
    },
     computed:{
       login(){
@@ -88,7 +97,8 @@ export default {
   },
   data(){
     return {
-      flag:0
+      flag:0,
+      gross: 0,
     }
   },
     
@@ -126,6 +136,22 @@ export default {
       }else if(this.$refs.scrollDiv.scrollTop<450){
         this.$store.state.num1=0
       }
+    },
+     jisuan(){
+				let that = this;
+				let a = 0;
+				let b = 0;
+				for (let i = 0; i < this.$store.state.shopcarlist.length; i++) {
+					a = a + that.$store.state.shopcarlist[i].count*that.$store.state.shopcarlist[i].com_flag
+					// console.log(that.$store.state.shopcarlist.count);
+					b = b + that.$store.state.shopcarlist[i].count*that.$store.state.shopcarlist[i].selectPrice*that.$store.state.shopcarlist[i].com_flag
+				}
+				this.gross = a;
+				// this.totalPrice = b.toFixed(2)
+			},
+    gross1(gross){
+      this.gross = gross
+      // console.log(this.gross);
     }
   }
 }
@@ -135,6 +161,24 @@ export default {
 *{
   margin: 0;
   padding: 0;
+}
+.shop{
+  position: relative;
+}
+.shop>div{
+  position: absolute;
+  background-color: red;
+  width: 19%;
+  height: 25%;
+  top: 10%;
+  right:26%;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  font-size:.2rem;
+  color: white;
+  border-radius: 50%;
+  border: 2px solid red;
 }
 .homePage{
     height: 100%;

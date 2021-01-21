@@ -19,7 +19,11 @@ export default {
     methods:{
          changeBackground(item,index){
             this.index00=index;
-            this.$emit("my-price",item.price)
+            this.$emit("my-price",{
+                Price:item.price,
+                selectName:item.name
+            })
+            // console.log(item.name);
         }
     }
     

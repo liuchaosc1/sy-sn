@@ -21,8 +21,12 @@ export default new Vuex.Store({
 				type: payload.amount.type,
 				price: payload.amount.price,
 				merchant: payload.amount.merchant,
-				count: 1,
-				com_flag:1
+				// count: 1,
+				count:payload.count,
+				com_flag:1,
+				select:payload.amount.select,
+				selectName:payload.selectName,
+				selectPrice:payload.selectPrice
 			});
 		
     },

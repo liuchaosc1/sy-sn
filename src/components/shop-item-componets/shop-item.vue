@@ -454,6 +454,7 @@
                 </div>
                 <div class="gouwu" @click="gouClick()">
                     <img src="../../assets/prodetail/sn-cart.png" alt />
+                    <div><span>{{gross}}</span></div>
                 </div>
             </div>
             <div class="buy-add">
@@ -476,7 +477,7 @@
                         <div class="product">
                             <div class="price">
                                 <div class="price-type">
-                                    <p v-if="price != false" class="choose-price">￥{{price}}</p>
+                                    <p v-if="selectPrice != false" class="choose-price">￥{{selectPrice}}</p>
                                     <p v-else class="choose-price">￥{{this.$route.query.price}}</p>
                                 </div>
                                 <p class="bianma">商品编码:11083216388</p>
@@ -492,6 +493,7 @@
                                 <div class="select-content" v-for="(item,index) in this.$route.query.select" :key="index">
                                     <h2>{{item.name}}</h2>
                                    <!-- --------------------------------------------- -->
+                                   {{num3}}
                                    <!-- ---------------------------------------------------- -->
                                     <my-sclass :msg = "item.mian" v-on:my-price="xuanzhon"></my-sclass>
                                 </div>
@@ -499,16 +501,16 @@
                                     <h2 class="flexhd">购买数量</h2>
                                     <div class="items">
                                         <span @click="less">-</span>
-                                        <input type="number" :value="num3">
+                                        <input type="number" v-model="num3" >
                                         <span @click="more">+</span>
                                     </div>
                                 </div>  
                             </div>
                             <div class="cluster-footer">
                                 <div class="cartbuy">
-                                    <div class="cart-buy">
+                                    <div class="cart-buy" @click="disapper='none'">
                                         <button class="btn-left">马上抢</button>
-                                        <button class="btn-right">加入购物车</button>
+                                        <button class="btn-right" @click="add">加入购物车</button>
                                     </div>
                                 </div>
                             </div>
@@ -529,6 +531,9 @@ export default {
     Swiper,
     SwiperSlide,
     "my-sclass":sclass,
+  },
+  created(){
+      this.jisuan();
   },
     data() {
         return {
@@ -563,7 +568,10 @@ export default {
             topMenuName: "product",
             proInfo: {},
             disapper:"none",
-            price:0,
+            gross: 0,
+            selectPrice:this.$route.query.selectPrice,
+            selectName:this.$route.query.selectName,
+            theList:this.$route.query,
              swiperOption: {
         loop: true,
         observer:true,
@@ -641,7 +649,7 @@ export default {
         
         open2() {
            this.disapper="block"
-
+            // console.log(this.theList);
         },
 
         // 详情跳转
@@ -671,16 +679,101 @@ export default {
              this.$router.go(-1);
            this.$store.state.componentName="shopping-car"
         },
-       xuanzhon(price){
-           if (price != null) {
-               this.price = price;
+       xuanzhon(obj){
+           
+           if (obj.Price != null) {
+               this.selectPrice = obj.Price;
+               this.selectName = obj.selectName;
            }
+        //    console.log(obj.Price);
        },
        appraise(){
             this.$router.push({
                 path: "/appraise"
             })
-       }
+       },
+       panduan(item) {
+				//遍历shopList中的所有对象++
+                let that = this
+                // console.log(item);
+				for (let i = 0; i < this.$store.state.shopcarlist.length; i++) {
+					//判断如果shoplist中有某个对象的id和调用者传过来的id相同
+					if (that.$store.state.shopcarlist[i].selectName == item) {
+
+						//返回这个对象的索引
+						return i;
+					}
+				}
+				//如果没有则返回-1
+				return -1;
+        },
+        //接收调用者传来的id
+			add() {
+                // console.log(this.$route.query)
+				let that = this
+                let index = this.panduan(this.selectName);
+                // console.log(this.selectName);
+				if (index > -1) {
+                    //就让这个元素的（个数）count值++
+                        let c = this.num3;
+                    
+				c = parseInt(c)
+				if (c < 1) {
+					c = 1;
+				}
+				if (c % 1 != 0) {
+					c = parseInt(c);
+					if (parseInt(c) % 1 != 0) {
+						c = 1;
+						c = c / 1;
+					}
+                }
+                this.num3 = c
+                // console.log(c);
+                    this.$store.state.shopcarlist[index].count+=(this.num3-0);
+                    console.log(this.$store.state.shopcarlist[index].count);
+                    console.log(this.num3);
+				} else {
+                    let c = this.num3;
+                    // console.log(c);
+				c = parseInt(c)
+				if (c < 1) {
+					c = 1;
+				}
+				if (c % 1 != 0) {
+					c = parseInt(c);
+					if (parseInt(c) % 1 != 0) {
+						c = 1;
+						c = c / 1;
+					}
+				}
+                this.num3 = c
+					that.$store.commit({
+						type: "add",
+						amount: this.theList,
+                        selectName:this.selectName,
+                        selectPrice:this.selectPrice,
+                        count:(this.num3-0)
+					});
+					// console.log(this.$store.state.shopcarlist)
+                    // this.fenlei()
+                    
+				}
+                this.num3 = 1;
+                this.jisuan();
+            },
+            jisuan(){
+				let that = this;
+				let a = 0;
+				let b = 0;
+				for (let i = 0; i < this.$store.state.shopcarlist.length; i++) {
+					a = a + that.$store.state.shopcarlist[i].count*that.$store.state.shopcarlist[i].com_flag
+					// console.log(that.$store.state.shopcarlist.count);
+					b = b + that.$store.state.shopcarlist[i].count*that.$store.state.shopcarlist[i].selectPrice*that.$store.state.shopcarlist[i].com_flag
+				}
+				this.gross = a;
+				// this.totalPrice = b.toFixed(2)
+			},
     },
 };
 </script>
@@ -1391,7 +1484,23 @@ a {
 .prodetail-bottom .buy-img .gouwu {
     width: 33%;
 }
-
+.gouwu{
+    position: relative;
+}
+.gouwu>div{
+    position: absolute;
+    background-color: red;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 40%;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .2rem;
+}
 .prodetail-bottom .buy-img img {
     width: 100%;
 }

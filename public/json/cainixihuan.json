@@ -5,12 +5,7 @@
 		"type": "shoppingCar/sn-ziying.png",
 		"price": "36.90",
 		"merchant": "苏宁自营",
-		"select": [{
-				"name": "数量",
-				"mian": [{
-					"name": "口罩"
-				}]
-			}, {
+		"select": [ {
 				"name": "品类",
 				"mian": [{
 						"name": "医用口罩独立50只",
@@ -239,9 +234,30 @@
 		"title": "云南白药(YUNNAN BAIYAO)牙膏180g留兰香型单支装",
 		"described": "送牙刷一支｜新老包装随机",
 		"type": "shoppingCar/miaosha.png",
-		"price": "28.31",
+		"price": "16.90",
 		"merchant": "湾仔码头",
-		"select": [],
+		"select": [{
+			"name": "",
+			"mian": [{
+					"name": "65g",
+					"price": "16.90"
+				},
+				{
+					"name": "100g",
+					"price": "21.90"
+				},
+				{
+					"name": "120g",
+					"price": "23.00"
+				},
+				{
+					"name": "180g",
+					"price": "27.90"
+				}
+			]
+		}
+	
+	],
 		"headPhoto": [
 			"shoppingCar/a4(head1).jpg",
 			"shoppingCar/a4(head2).jpg",
@@ -309,7 +325,16 @@
 		"type": "shoppingCar/sn-ziying.png",
 		"price": "28.90",
 		"merchant": "良品铺子",
-		"select": [],
+		"select": [{
+			"name": "",
+			"mian": [{
+					"name": "坚果果干零食礼盒1166g/8袋装",
+					"price": "28.90"
+				}
+			]
+		}
+	
+	],
 		"headPhoto": [
 			"shoppingCar/a5(head1).jpg",
 			"shoppingCar/a5(head2).jpg",
@@ -390,7 +415,16 @@
 		"type": "shoppingCar/miaosha.png",
 		"price": "19.90",
 		"merchant": "良品铺子",
-		"select": [],
+		"select": [{
+			"name": "",
+			"mian": [{
+					"name": "山楂糕50g/袋",
+					"price": "19.90"
+				}
+			]
+		}
+	
+	],
 		"headPhoto": [
 			"shoppingCar/a6(head1).jpg",
 			"shoppingCar/a6(head2).jpg",
@@ -461,7 +495,24 @@
 		"merchant": "良品铺子",
 		"type": "shoppingCar/miaosha.png",
 		"price": "17.90",
-		"select": [],
+		"select": [{
+			"name": "",
+			"mian": [{
+					"name": "12包",
+					"price": "17.90"
+				},
+				{
+					"name": "16包",
+					"price": "20.90"
+				},
+				{
+					"name": "20包",
+					"price": "23.90"
+				}
+			]
+		}
+	
+	],
 		"headPhoto": [
 			"shoppingCar/a7(head1).jpg",
 			"shoppingCar/a7(head2).jpg",
@@ -517,7 +568,16 @@
 		"type": "shoppingCar/miaosha.png",
 		"price": "30.90",
 		"merchant": "苏宁自营",
-		"select": [],
+		"select": [{
+			"name": "",
+			"mian": [{
+					"name": "50g/只",
+					"price": "30.90"
+				}
+			]
+		}
+	
+	],
 		"headPhoto": [
 			"shoppingCar/a8(head1).jpg",
 			"shoppingCar/a8(head2).jpg",
