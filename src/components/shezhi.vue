@@ -90,7 +90,7 @@ export default {
 <style scoped>
 .bach{
     position: absolute;
-    width: 414px;
+    width: 100%;
     height: 800px;
     background:rgba(0, 0, 0, 0.3);
     top:0
@@ -121,8 +121,8 @@ export default {
 }
 .tuichu{
     position:absolute;
-    width: 364px;
-       left: 25px;
+    width: 90%;
+    left: 5%;
     top: 290px;
     border-radius: 0.2rem;
     background: #FFF;
@@ -175,6 +175,7 @@ export default {
 }
 .shezhi{
     width: 100%;
+    overflow: hidden;
   
 }
 
