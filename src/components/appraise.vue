@@ -25,13 +25,13 @@
         <!-- 评价详情 -->
         <div class="rec-panel">
             <div class="sn-comment-box">
-                <div class="comment-li">
+                <div class="comment-li" v-for="(item,index) in list" :key="index">
                     <div class="fix">
                         <div class="personal">
-                            <img src="https://image.suning.cn/uimg/cmf/cust_headpic/0000000000_33_60x60.jpg" alt="">
+                            <img :src="item.userpic" alt="">
                             <div class="personalText">
                                 <div>
-                                    <span>用户名</span>
+                                    <span>{{item.username}}</span>
                                 </div>
                                 <div>2020-11-13</div>
                             </div>
@@ -47,16 +47,16 @@
                     </div>
 
                     <div class="spec">
-                        <span>商品名称</span>
+                        <span>{{item.bysing}}</span>
                     </div>
                     
-                    <div class="evalCon">
-                        <div>这里面放的评论</div>
+                    <div class="evalCon" >
+                        <div>{{item.say}}</div>
                     </div>
                     <!-- 图片 -->
                     <div class="show">
-                        <div class="show-item">
-                            <img src="" alt="">
+                        <div class="show-item" v-for="(item1,index1) in item.photo" :key="index1">
+                            <img :src="item1" alt="">
                         </div>
                     </div>
                 </div>
@@ -66,7 +66,13 @@
 </template>
 <script>
 export default {
+    data(){
+        return {
+            list:this.$router.currentRoute.query.comment
+        }
+    },
     methods:{
+        
         toback(){
             this.$router.go(-1)
         }

@@ -40,7 +40,7 @@
 							<div v-if="item1%1 != 0">
 								<div><input type="checkbox" :checked="item1.com_flag" @click="com_checked(item1)" /></div>
 								<div>
-									<div>
+									<div @click="goto(item1)">
 										<img :src="item1.pic" alt="" />
 									</div>
 									<div class="more">
@@ -481,6 +481,7 @@
 						that.a[i][that.a[i].length - 1] = 0
 					}
 				}
+				
 			},
 			del1() {
 
@@ -515,8 +516,11 @@
 				}
 				this.gross = a;
 				this.totalPrice = b.toFixed(2)
+				this.$emit("my-add",this.gross)
+
 			},
 			goRegister(item){
+				// console.log(item);
 				this.$router.push({path:'/shopitem',query:{
 					described:item.described,
 					detailPage:item.detailPage,
@@ -538,6 +542,25 @@
 			this.shuoming = item1.select[0].mian[0].name
 			// console.log(this.$store.state.shopcarlist);
 			// console.log(this.shuoming);
+		},
+		puanduan2(item){
+			// this.goRegister(item)
+			// console.log(this.likeList);
+			let that = this
+			for (let i = 0; i < this.likeList.length; i++) {
+					if (that.likeList[i].title == item ){
+						//返回这个对象的索引
+						return i;
+						// console.log(i);
+					}
+					
+				}
+			return -1;
+		},
+		goto(item){
+			let index = this.puanduan2(item.title);
+			// console.log(this.likeList[index]);
+			this.goRegister(this.likeList[index])
 		}
 		},
 		
@@ -552,10 +575,10 @@
 	-webkit-line-clamp: 1;
 	-webkit-box-orient: vertical;
 	font-size: 0.05rem;
-	color: #666;
+	color: rgb(109, 131, 109);
 	text-overflow: ellipsis;
 	height: 13px;
-	line-height: 11px;
+	line-height: 13px;
 	width: 60%;
 	overflow-x: hidden;
 }
@@ -1112,7 +1135,7 @@
 
 	.more {
 		position: absolute;
-		height: 95%;
+		height: 121%;
 		/* background-color: hotpink; */
 		width: 73%;
 		left: 23%;

@@ -23,8 +23,10 @@
          <div class="bottom-btn" @click="btn('paihangbang')" >
            
             <!-- <img src="../images/panghangbang-b.png" alt="" v-if="componentName=='paihangbang'" class="bottom-img"> -->
-            <img src="../images/paihangbang.png" alt=""  class="bottom-img">
+            <a href="https://c.m.suning.com/phbChannel.html?safp=f73ee1cf.wapindex7.113464329889.3&safpn=10001">
+              <img src="../images/paihangbang.png" alt=""  class="bottom-img">
             <span class="bottom-title">必抢清单</span>
+            </a>
         </div>
          <div class="bottom-btn shop" @click="btn('shopping-car')" >
            <div v-if="gross > 0">{{gross}}</div>
@@ -66,7 +68,7 @@ import myAccount from "./myAccount"
 export default {
    mounted(){
      this.$refs.scrollDiv.addEventListener("scroll",this.scrollEvent,true)
-     console.log(this.$refs.child);
+    //  console.log(this.$refs.child);
      this.gross = this.$refs.child._data.gross;
 
    },
@@ -216,6 +218,13 @@ export default {
     flex-direction: column;
     align-items: center;
    
+}
+.bottom-btn>a{
+   flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
 }
 .bottom-img{
     width: 25px;

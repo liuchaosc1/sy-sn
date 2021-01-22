@@ -792,7 +792,9 @@ export default {
 					price:item.price,
 					select:item.select,
 					title:item.title,
-					type:item.type,
+          type:item.type,
+          selectName:item.select[0].mian[0].name,
+					selectPrice:item.select[0].mian[0].price
 					}})
     },
 
