@@ -165,7 +165,11 @@
             </div>
             <div class="user-eva">
                 <p>{{this.$route.query.evaluate[0].say}}</p>
-                <img v-for="(item,index) in this.$route.query.evaluate[0].photo" :src="item" alt  :key="index"/>
+                <div class="use-img-content">
+                    <div v-for="(item,index) in this.$route.query.evaluate[0].photo" :key="index" class="user-eva-item">
+                        <img  :src="item" alt  />
+                    </div>
+                </div>
 
                 <!-- <img src="//image3.suning.cn/uimg/ZR/share_order/160801883639271649.jpg?format=400w_400h_1e_1c" alt />
                  <img src="//image3.suning.cn/uimg/ZR/share_order/160801883639271649.jpg?format=400w_400h_1e_1c" alt />
@@ -1582,18 +1586,36 @@ a {
 }
 .user-eva {
     height: 50%;
-    padding: 24px 8px;
+    padding: 7px 8px;
+}
+.user-eva-item{
+    width:33.3%;
+    height: 100%;
+    margin-left: 5px;
+}
+.use-img-content{
+    width: 100%;
+    height: 95%;
+    display: flex;
+    justify-content: flex-start;
+    overflow: hidden;
+    /* white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin-top: .36rem */
 }
 .user-phone {
     margin-left: 6px;
 }
 .user-eva > p {
     font-size: 14px;
+    margin-bottom: 12px;
+    height: 0.875rem;
+    overflow: hidden;
 }
-.user-eva > img {
-    height: 70%;
-    
-    margin-left: 16px;
+.user-eva-item>img {
+   height: 3.4rem;
+    width: 3.4rem;
 }
 .eva-bottom {
     display: flex;

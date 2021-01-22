@@ -64,7 +64,7 @@
                     <div class="header-title">
                         <div class="title">我的易购</div>
                         <div class="header-icon iconfont">
-                            <a href @click.prevent>&#xe705;</a>
+                            <a  @click.prevent="toOut">&#xe705;</a>
                         </div>
                     </div>
                     <div class="information">
@@ -306,6 +306,11 @@ export default {
       }else if(this.open==false){
         return "text"
       }
+    },
+    toOut(){
+      this.$router.push({
+        path:"/toOut"
+      })
     }
   },
 };
